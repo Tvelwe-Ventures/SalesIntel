@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalesIntel by Csignal AI - Simplified</title>
+    <!-- Using Font Awesome instead of Bootstrap Icons for better compatibility -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #005e40;
+            --primary-light: #007a52;
+            --primary-dark: #004830;
+            --primary-subtle: #e6f0ed;
+            --secondary: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #dee2e6;
+            --lighter-gray: #f1f3f5;
+            --success: #28a745;
+            --info: #0d6efd;
+            --warning: #ffc107;
+            --danger: #dc3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--lighter-gray);
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: white;
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .metric-value {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .metric-title {
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+        
+        .button {
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+            border: none;
+            margin-right: 10px;
+        }
+        
+        .button-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .button-secondary {
+            background-color: white;
+            color: var(--dark);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .button-icon {
+            margin-right: 8px;
+        }
+        
+        .account-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .account-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-right: 20px;
+        }
+        
+        .account-info {
+            flex: 1;
+        }
+        
+        .account-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .account-details {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+        
+        .account-detail {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .account-detail-icon {
+            margin-right: 8px;
+        }
+        
+        .tab-menu {
+            display: flex;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 30px;
+        }
+        
+        .tab {
+            padding: 12px 20px;
+            color: var(--gray);
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        .signal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .signal-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .signal-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-subtle);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 20px;
+        }
+        
+        .signal-content {
+            flex: 1;
+        }
+        
+        .signal-title {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .signal-meta {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .signal-details {
+            margin-bottom: 20px;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .tag {
+            display: inline-flex;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .tag-success {
+            background-color: #d1e7dd;
+            color: #0f5132;
+        }
+        
+        .tag-info {
+            background-color: #cfe2ff;
+            color: #084298;
+        }
+        
+        .tag-warning {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .ai-assistant {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        
+        /* Simple responsive design */
+        @media (max-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .account-header {
+                flex-direction: column;
+            }
+            
+            .account-logo {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <div>SalesIntel <span style="font-weight: 400; font-size: 16px; opacity: 0.8;">by Csignal AI</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="account-header">
+            <div class="account-logo">T</div>
+            <div class="account-info">
+                <div class="account-name">TechNova</div>
+                <div class="account-details">
+                    <div class="account-detail">
+                        <span class="account-detail-icon"><i class="fas fa-globe"></i></span>
+                        technova.ai
+                    </div>
+                    <div class="account-detail">
+                        <span class="account-detail-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        San Francisco, CA
+                    </div>
+                    <div class="account-detail">
+                        <span class="account-detail-icon"><i class="fas fa-users"></i></span>
+                        500-1,000 employees
+                    </div>
+                    <div class="account-detail">
+                        <span class="account-detail-icon"><i class="fas fa-dollar-sign"></i></span>
+                        $75M annual revenue
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="tag tag-success">Target Account</div>
+                    <div class="tag tag-info">AI & Machine Learning</div>
+                    <div class="tag tag-warning">Competitor: DataMinds</div>
+                </div>
+                <div>
+                    <button class="button button-primary">
+                        <span class="button-icon"><i class="fas fa-envelope"></i></span>
+                        Contact
+                    </button>
+                    <button class="button button-secondary">
+                        <span class="button-icon"><i class="fas fa-star"></i></span>
+                        Follow
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-menu">
+            <div class="tab active" onclick="activateTab(this)">Overview</div>
+            <div class="tab" onclick="activateTab(this)">Signals</div>
+            <div class="tab" onclick="activateTab(this)">People</div>
+            <div class="tab" onclick="activateTab(this)">Engagement</div>
+            <div class="tab" onclick="activateTab(this)">Notes</div>
+        </div>
+        
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-title">Fit Score</div>
+                <div class="metric-value">94%</div>
+                <div style="color: var(--success);"><i class="fas fa-arrow-up"></i> High match</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Intent Signals</div>
+                <div class="metric-value">9</div>
+                <div style="color: var(--success);"><i class="fas fa-arrow-up"></i> 3 new in last 30 days</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Key Contacts</div>
+                <div class="metric-value">5</div>
+                <div style="color: var(--info);"><i class="fas fa-info-circle"></i> 2 decision makers</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Last Engagement</div>
+                <div class="metric-value">2 days ago</div>
+                <div style="color: var(--success);"><i class="fas fa-check-circle"></i> Email response</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Strategic Initiatives</div>
+                <button class="button button-secondary">
+                    <i class="fas fa-filter"></i> Filter
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="signal-list">
+                    <div class="signal-item">
+                        <div class="signal-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="signal-content">
+                            <div class="signal-title">Digital Transformation Initiative</div>
+                            <div class="signal-meta">
+                                <i class="fas fa-file-alt"></i> Annual Report, Q2 2024 | 
+                                <i class="fas fa-calendar"></i> 2 days ago
+                            </div>
+                            <div class="signal-details">
+                                TechNova has launched a comprehensive digital transformation initiative focused on modernizing their core systems and implementing AI-driven analytics across all business units. The project has a $12M budget and is expected to be completed within 18 months.
+                            </div>
+                            <div>
+                                <button class="button button-primary">
+                                    <i class="fas fa-bolt"></i> Take Action
+                                </button>
+                                <button class="button button-secondary">
+                                    <i class="fas fa-bookmark"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="signal-item">
+                        <div class="signal-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="signal-content">
+                            <div class="signal-title">Expansion into European Markets</div>
+                            <div class="signal-meta">
+                                <i class="fas fa-newspaper"></i> Press Release, TechCrunch | 
+                                <i class="fas fa-calendar"></i> 1 week ago
+                            </div>
+                            <div class="signal-details">
+                                TechNova announced plans to expand operations into European markets, starting with offices in London and Berlin. They are actively hiring local talent and expecting to grow the European team to 50+ employees by end of year.
+                            </div>
+                            <div>
+                                <button class="button button-primary">
+                                    <i class="fas fa-bolt"></i> Take Action
+                                </button>
+                                <button class="button button-secondary">
+                                    <i class="fas fa-bookmark"></i> Save
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ai-assistant" onclick="alert('SalesIntel AI Assistant is ready to help!')">
+        <i class="fas fa-robot"></i>
+    </div>
+    
+    <script>
+        function activateTab(tab) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(t => {
+                t.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // In a real implementation, we would show/hide content here
+            console.log('Switched to tab:', tab.textContent);
+            alert('Switched to: ' + tab.textContent + ' tab');
+        }
+    </script>
+</body>
+</html>

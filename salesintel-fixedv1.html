@@ -1,0 +1,2728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalesIntel by Csignal AI - Enhanced Application Prototype</title>
+    <!-- Using Font Awesome as a more reliable icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #005e40;
+            --primary-light: #007a52;
+            --primary-dark: #004830;
+            --primary-subtle: #e6f0ed;
+            --primary-subtle-hover: #d0e5de;
+            --secondary: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #dee2e6;
+            --lighter-gray: #f1f3f5;
+            --success: #28a745;
+            --success-light: #d4edda;
+            --info: #0d6efd;
+            --info-light: #cfe2ff;
+            --warning: #ffc107;
+            --warning-light: #fff3cd;
+            --danger: #dc3545;
+            --danger-light: #f8d7da;
+            --bombora: #1b5e94;
+            --bombora-light: #d4e5f3;
+            --gong: #7f39fb;
+            --gong-light: #e8dcff;
+            --clearbit: #000000;
+            --clearbit-light: #e6e6e6;
+            --assistant: #ffc107;
+            --assistant-light: #fff8e1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--lighter-gray);
+            color: var(--dark);
+            line-height: 1.6;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+        }
+        
+        .sidebar {
+            width: 240px;
+            background-color: white;
+            height: 100vh;
+            border-right: 1px solid var(--light-gray);
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .content-body {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .logo-section {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: 700;
+        }
+        
+        .nav-section {
+            padding: 20px 10px;
+        }
+        
+        .nav-section-title {
+            padding: 0 10px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--gray);
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+        
+        .nav-menu {
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-bottom: 5px;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 6px;
+            color: var(--gray);
+            text-decoration: none;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+        
+        .nav-link:hover {
+            background-color: var(--lighter-gray);
+        }
+        
+        .nav-link.active {
+            background-color: var(--primary-subtle);
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .user-section {
+            margin-top: auto;
+            padding: 20px;
+            border-top: 1px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+            background-color: var(--primary-subtle);
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .user-info {
+            flex: 1;
+        }
+        
+        .user-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .user-role {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .header {
+            padding: 15px 30px;
+            background-color: white;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .page-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .search-bar {
+            position: relative;
+        }
+        
+        .search-input {
+            padding: 8px 15px 8px 35px;
+            border-radius: 6px;
+            border: 1px solid var(--light-gray);
+            background-color: var(--secondary);
+            font-size: 14px;
+            width: 250px;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .button {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border: none;
+            font-size: 14px;
+        }
+        
+        .button-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .button-secondary {
+            background-color: white;
+            color: var(--dark);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .button-small {
+            padding: 6px 12px;
+            font-size: 13px;
+        }
+        
+        .button-icon {
+            margin-right: 8px;
+        }
+        
+        .button-right-icon {
+            margin-left: 8px;
+        }
+        
+        .account-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .account-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-right: 20px;
+        }
+        
+        .account-info {
+            flex: 1;
+        }
+        
+        .account-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .account-details {
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+        
+        .account-detail {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .account-detail-icon {
+            margin-right: 5px;
+        }
+        
+        .account-actions {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        
+        .account-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .tag-success {
+            background-color: var(--success-light);
+            color: var(--success);
+        }
+        
+        .tag-info {
+            background-color: var(--info-light);
+            color: var(--info);
+        }
+        
+        .tag-warning {
+            background-color: var(--warning-light);
+            color: var(--warning);
+        }
+        
+        .tab-menu {
+            display: flex;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 30px;
+        }
+        
+        .tab {
+            padding: 12px 20px;
+            color: var(--gray);
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .company-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .company-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .company-card-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .company-card-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 12px;
+        }
+        
+        .company-card-info {
+            flex: 1;
+        }
+        
+        .company-card-name {
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .company-card-verified {
+            color: var(--success);
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        
+        .company-card-industry {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .company-card-body {
+            padding: 15px;
+        }
+        
+        .company-card-metric {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .company-card-metric-label {
+            color: var(--gray);
+        }
+        
+        .company-card-metric-value {
+            font-weight: 500;
+        }
+        
+        .company-card-signals {
+            margin-top: 15px;
+        }
+        
+        .company-card-signals-header {
+            font-size: 12px;
+            color: var(--gray);
+            margin-bottom: 8px;
+        }
+        
+        .company-card-signal {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .company-card-signal-icon {
+            color: var(--primary);
+            margin-right: 8px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .signal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .signal-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+        }
+        
+        .signal-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background-color: var(--primary-subtle);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .signal-content {
+            flex: 1;
+        }
+        
+        .signal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .signal-title {
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .signal-meta {
+            display: flex;
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .signal-source {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .signal-source-icon {
+            margin-right: 5px;
+        }
+        
+        .signal-date {
+            display: flex;
+            align-items: center;
+        }
+        
+        .signal-date-icon {
+            margin-right: 5px;
+        }
+        
+        .signal-details {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .signal-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .meeting-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .meeting-item {
+            display: flex;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .meeting-time {
+            padding: 15px;
+            background-color: var(--primary-subtle);
+            color: var(--primary);
+            text-align: center;
+            min-width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .meeting-hour {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .meeting-day {
+            font-size: 14px;
+        }
+        
+        .meeting-content {
+            padding: 15px;
+            flex: 1;
+        }
+        
+        .meeting-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .meeting-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .meeting-company {
+            margin-bottom: 10px;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+        }
+        
+        .meeting-company-icon {
+            margin-right: 5px;
+        }
+        
+        .meeting-details {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .meeting-attendees {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .attendee {
+            display: flex;
+            align-items: center;
+            background-color: var(--lighter-gray);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        
+        .attendee-avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+        
+        .meeting-actions {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            border-left: 1px solid var(--light-gray);
+        }
+        
+        .account-view {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .account-main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .account-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .person-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .person-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .person-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: var(--lighter-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: 600;
+            color: var(--gray);
+        }
+        
+        .person-info {
+            flex: 1;
+        }
+        
+        .person-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .person-role {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .person-body {
+            padding: 15px;
+        }
+        
+        .person-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        
+        .person-detail-icon {
+            margin-right: 8px;
+            color: var(--gray);
+            width: 16px;
+            text-align: center;
+        }
+        
+        .person-tags {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .person-tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            background-color: var(--lighter-gray);
+            color: var(--gray);
+        }
+        
+        .person-actions {
+            display: flex;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .person-action {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--primary);
+            border-right: 1px solid var(--light-gray);
+            cursor: pointer;
+        }
+        
+        .person-action:last-child {
+            border-right: none;
+        }
+        
+        .integration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .integration-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .integration-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .integration-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .integration-info {
+            flex: 1;
+        }
+        
+        .integration-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .integration-category {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .integration-body {
+            padding: 15px;
+            flex: 1;
+        }
+        
+        .integration-description {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .integration-features {
+            margin-bottom: 15px;
+        }
+        
+        .integration-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .integration-feature-icon {
+            margin-right: 8px;
+            color: var(--success);
+        }
+        
+        .integration-footer {
+            padding: 15px;
+            border-top: 1px solid var(--light-gray);
+            text-align: center;
+        }
+        
+        .activity-filter {
+            display: flex;
+            margin-bottom: 20px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .activity-filter-option {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--gray);
+            cursor: pointer;
+            border-right: 1px solid var(--light-gray);
+            background-color: white;
+        }
+        
+        .activity-filter-option.active {
+            background-color: var(--primary-subtle);
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .activity-filter-option:last-child {
+            border-right: none;
+        }
+        
+        .activity-timeline {
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .activity-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--light-gray);
+        }
+        
+        .activity-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        .activity-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 2px solid white;
+        }
+        
+        .activity-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .activity-title {
+            font-weight: 500;
+        }
+        
+        .activity-time {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .activity-details {
+            font-size: 14px;
+        }
+        
+        .meeting-preparation {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .meeting-prep-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .meeting-prep-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .meeting-prep-subtitle {
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+        }
+        
+        .meeting-prep-icon {
+            margin-right: 5px;
+        }
+        
+        .meeting-prep-body {
+            padding: 0 20px;
+        }
+        
+        .meeting-prep-section {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .meeting-prep-section:last-child {
+            border-bottom: none;
+        }
+        
+        .meeting-prep-section-header {
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .meeting-prep-section-icon {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-subtle);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .topic-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .topic-item {
+            background-color: var(--lighter-gray);
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+        
+        .relationship-map {
+            background-color: var(--lighter-gray);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .relationship-map img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        
+        .talkingpoint-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .talkingpoint-item {
+            background-color: var(--lighter-gray);
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+        
+        .note-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+        
+        .note-header {
+            padding: 15px;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .note-title {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .note-icon {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+        
+        .note-date {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .note-body {
+            padding: 15px;
+        }
+        
+        .note-content {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .note-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .note-tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            background-color: var(--lighter-gray);
+            color: var(--gray);
+        }
+        
+        .note-footer {
+            padding: 10px 15px;
+            border-top: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .note-meta {
+            display: flex;
+            align-items: center;
+        }
+        
+        .note-meta-icon {
+            margin-right: 5px;
+        }
+        
+        .note-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .note-action {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        .note-action-icon {
+            margin-right: 5px;
+        }
+        
+        .editor-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .editor-toolbar {
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .toolbar-button {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            color: var(--gray);
+            cursor: pointer;
+        }
+        
+        .toolbar-button:hover {
+            background-color: var(--lighter-gray);
+        }
+        
+        .toolbar-separator {
+            width: 1px;
+            height: 20px;
+            background-color: var(--light-gray);
+            margin: 0 5px;
+        }
+        
+        .editor-content {
+            padding: 15px;
+            min-height: 150px;
+        }
+        
+        .editor-footer {
+            padding: 10px 15px;
+            border-top: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .editor-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        .editor-meta-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .editor-meta-icon {
+            margin-right: 5px;
+        }
+        
+        .quick-add {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+        
+        .quick-add-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        
+        .signal-ai-assistant {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 100;
+        }
+        
+        .signal-ai-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: var(--assistant);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .signal-ai-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: var(--danger);
+            color: white;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        .signal-ai-panel {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            z-index: 101;
+            display: none;
+        }
+        
+        .signal-ai-header {
+            padding: 15px;
+            background-color: var(--assistant);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .signal-ai-title {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .signal-ai-icon {
+            margin-right: 10px;
+        }
+        
+        .signal-ai-close {
+            cursor: pointer;
+        }
+        
+        .signal-ai-body {
+            padding: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .signal-ai-conversation {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .message {
+            display: flex;
+            align-items: flex-start;
+            max-width: 85%;
+        }
+        
+        .message-ai {
+            align-self: flex-start;
+        }
+        
+        .message-user {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+        
+        .message-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            flex-shrink: 0;
+        }
+        
+        .message-ai .message-avatar {
+            background-color: var(--assistant);
+            color: white;
+        }
+        
+        .message-user .message-avatar {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .message-content {
+            background-color: var(--lighter-gray);
+            padding: 12px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            position: relative;
+        }
+        
+        .message-ai .message-content {
+            border-top-left-radius: 0;
+            background-color: var(--assistant-light);
+        }
+        
+        .message-user .message-content {
+            border-top-right-radius: 0;
+            background-color: var(--primary-subtle);
+        }
+        
+        .message-time {
+            font-size: 10px;
+            color: var(--gray);
+            margin-top: 5px;
+            text-align: right;
+        }
+        
+        .signal-ai-footer {
+            padding: 15px;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .signal-ai-input {
+            display: flex;
+            align-items: center;
+            background-color: var(--lighter-gray);
+            border-radius: 20px;
+            padding: 0 15px;
+        }
+        
+        .signal-ai-input input {
+            flex: 1;
+            border: none;
+            padding: 10px 0;
+            background-color: transparent;
+            outline: none;
+        }
+        
+        .signal-ai-send {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background-color: var(--assistant);
+            color: white;
+            cursor: pointer;
+        }
+        
+        .tabs-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .tabs-content {
+            display: none;
+            height: 100%;
+            overflow-y: auto;
+            padding: 30px;
+        }
+        
+        .tabs-content.active {
+            display: block;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
+        
+        .metric-header {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .metric-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background-color: var(--primary-subtle);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        
+        .metric-title {
+            font-weight: 500;
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .metric-value {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .metric-trend {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+        }
+        
+        .trend-up {
+            color: var(--success);
+        }
+        
+        .trend-down {
+            color: var(--danger);
+        }
+        
+        .metric-trend-icon {
+            margin-right: 5px;
+        }
+        
+        .integration-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        
+        .integration-badge-bombora {
+            background-color: var(--bombora-light);
+            color: var(--bombora);
+        }
+        
+        .integration-badge-gong {
+            background-color: var(--gong-light);
+            color: var(--gong);
+        }
+        
+        .integration-badge-clearbit {
+            background-color: var(--clearbit-light);
+            color: var(--clearbit);
+        }
+        
+        .usecase-section {
+            margin-bottom: 40px;
+        }
+        
+        .usecase-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .usecase-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .usecase-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+        }
+        
+        .usecase-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .usecase-info {
+            flex: 1;
+        }
+        
+        .usecase-name {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .usecase-description {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .usecase-body {
+            padding: 20px;
+        }
+        
+        .usecase-step {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .usecase-step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .usecase-step-number {
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .usecase-step-content {
+            flex: 1;
+        }
+        
+        .usecase-step-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .usecase-step-description {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .screenshot {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--light-gray);
+            margin-top: 10px;
+        }
+        
+        .data-sources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .data-source {
+            display: flex;
+            align-items: center;
+            background-color: var(--lighter-gray);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+        
+        .data-source-icon {
+            margin-right: 5px;
+        }
+        
+        /* Enhanced Signal AI Assistant with Flash Gordon Lightning Icon */
+        .flash-icon {
+            color: var(--warning);
+            font-size: 22px;
+            margin-right: 5px;
+        }
+        
+        /* Tabbed Interface Styles for Meetings Module */
+        .meetings-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        .meetings-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: var(--gray);
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .meetings-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        /* Meeting Intelligence Panel */
+        .meeting-intelligence {
+            background-color: var(--lighter-gray);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .meeting-intelligence-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .meeting-intelligence-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: var(--warning);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .meeting-intelligence-title {
+            font-weight: 600;
+        }
+        
+        .meeting-intelligence-insight {
+            background-color: white;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--warning);
+        }
+        
+        /* Enhanced People Module */
+        .people-filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .people-filter {
+            padding: 6px 12px;
+            background-color: white;
+            border-radius: 20px;
+            font-size: 13px;
+            border: 1px solid var(--light-gray);
+            cursor: pointer;
+        }
+        
+        .people-filter.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .person-influence {
+            width: 100%;
+            height: 4px;
+            background-color: var(--light-gray);
+            border-radius: 2px;
+            margin-top: 10px;
+        }
+        
+        .person-influence-bar {
+            height: 100%;
+            border-radius: 2px;
+            background-color: var(--info);
+        }
+        
+        /* App Ecosystem Section */
+        .app-ecosystem {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .app-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+        
+        .app-name {
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .app-category {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        /* Signals Module Enhancements */
+        .signal-strength {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        
+        .signal-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background-color: var(--light-gray);
+        }
+        
+        .signal-dot.active {
+            background-color: var(--primary);
+        }
+        
+        .signal-filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .signal-filter {
+            padding: 6px 12px;
+            background-color: white;
+            border-radius: 20px;
+            font-size: 13px;
+            border: 1px solid var(--light-gray);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .signal-filter.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .signal-filter-icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-section">
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <div>SalesIntel <span style="font-weight: 400; font-size: 12px; opacity: 0.8;">by Csignal AI</span></div>
+            </div>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Main Navigation</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showTab('dashboard')">
+                        <div class="nav-icon">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showTab('accounts')">
+                        <div class="nav-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div>Accounts</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" onclick="showTab('signals')">
+                        <div class="nav-icon">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <div>Signals</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showTab('people')">
+                        <div class="nav-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>People</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showTab('meetings')">
+                        <div class="nav-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div>Meetings</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showTab('notes')">
+                        <div class="nav-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div>Notes</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showTab('integrations')">
+                        <div class="nav-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div>Integrations</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showTab('usecases')">
+                        <div class="nav-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>Use Cases</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-section">
+            <div class="nav-section-title">Workflows</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <div class="nav-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div>Lead Qualification</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <div class="nav-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>Outreach</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <div class="nav-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>Discovery</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <div class="nav-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div>Proposals</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="user-section">
+            <div class="user-avatar">SR</div>
+            <div class="user-info">
+                <div class="user-name">Sophie Reynolds</div>
+                <div class="user-role">Account Executive</div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1 class="page-title">Intelligence Signals</h1>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search signals, accounts, and more...">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="button button-secondary">
+                        <span class="button-icon">
+                            <i class="fas fa-filter"></i>
+                        </span>
+                        Filter
+                    </button>
+                    <button class="button button-primary">
+                        <span class="button-icon">
+                            <i class="fas fa-bolt"></i>
+                        </span>
+                        Take Action
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-container">
+            <!-- Signals Tab -->
+            <div id="signals" class="tabs-content active">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-icon">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </div>
+                            <div class="metric-title">Total Signals</div>
+                        </div>
+                        <div class="metric-value">127</div>
+                        <div class="metric-trend trend-up">
+                            <span class="metric-trend-icon"><i class="fas fa-arrow-up"></i></span>
+                            <span>23% from last month</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="metric-title">Action-Ready Signals</div>
+                        </div>
+                        <div class="metric-value">42</div>
+                        <div class="metric-trend trend-up">
+                            <span class="metric-trend-icon"><i class="fas fa-arrow-up"></i></span>
+                            <span>8 new today</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="metric-title">Actions Taken</div>
+                        </div>
+                        <div class="metric-value">68</div>
+                        <div class="metric-trend trend-up">
+                            <span class="metric-trend-icon"><i class="fas fa-arrow-up"></i></span>
+                            <span>12 this week</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="metric-title">Accounts With Signals</div>
+                        </div>
+                        <div class="metric-value">37</div>
+                        <div class="metric-trend trend-up">
+                            <span class="metric-trend-icon"><i class="fas fa-arrow-up"></i></span>
+                            <span>5 new this week</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="signal-filters">
+                    <div class="signal-filter active">
+                        <span class="signal-filter-icon"><i class="fas fa-bolt"></i></span>
+                        High Priority
+                    </div>
+                    <div class="signal-filter">
+                        <span class="signal-filter-icon"><i class="fas fa-user-plus"></i></span>
+                        Leadership Changes
+                    </div>
+                    <div class="signal-filter">
+                        <span class="signal-filter-icon"><i class="fas fa-microchip"></i></span>
+                        Digital Transformation
+                    </div>
+                    <div class="signal-filter">
+                        <span class="signal-filter-icon"><i class="fas fa-chart-line"></i></span>
+                        Growth Indicators
+                    </div>
+                    <div class="signal-filter">
+                        <span class="signal-filter-icon"><i class="fas fa-coins"></i></span>
+                        Funding Events
+                    </div>
+                    <div class="signal-filter">
+                        <span class="signal-filter-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        Expansion Signals
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Priority Signals</div>
+                        <div class="card-actions">
+                            <button class="button button-secondary button-small">
+                                <i class="fas fa-filter"></i>
+                                Filter
+                            </button>
+                            <button class="button button-secondary button-small">
+                                <i class="fas fa-sort-amount-down"></i>
+                                Sort
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="signal-list">
+                            <div class="signal-item">
+                                <div class="signal-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div class="signal-content">
+                                    <div class="signal-header">
+                                        <div class="signal-title">Digital Transformation Initiative at TechNova</div>
+                                        <div class="signal-meta">
+                                            <div class="signal-source">
+                                                <span class="signal-source-icon"><i class="fas fa-file-alt"></i></span>
+                                                Annual Report, Q2 2024
+                                            </div>
+                                            <div class="signal-date">
+                                                <span class="signal-date-icon"><i class="fas fa-calendar-alt"></i></span>
+                                                2 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-details">
+                                        TechNova has launched a comprehensive digital transformation initiative focused on modernizing their core systems and implementing AI-driven analytics across all business units. The project has a $12M budget and is expected to be completed within 18 months.
+                                    </div>
+                                    <div class="signal-strength">
+                                        <span style="font-size: 12px; color: var(--gray);">Signal Strength:</span>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot"></div>
+                                    </div>
+                                    <div class="signal-actions">
+                                        <button class="button button-secondary button-small">
+                                            <i class="fas fa-bookmark"></i>
+                                            Save
+                                        </button>
+                                        <button class="button button-secondary button-small">
+                                            <i class="fas fa-share"></i>
+                                            Share
+                                        </button>
+                                        <button class="button button-primary button-small">
+                                            <i class="fas fa-bolt"></i>
+                                            Take Action
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="signal-item">
+                                <div class="signal-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="signal-content">
+                                    <div class="signal-header">
+                                        <div class="signal-title">New CTO Hired at FinEdge</div>
+                                        <div class="signal-meta">
+                                            <div class="signal-source">
+                                                <span class="signal-source-icon"><i class="fab fa-linkedin"></i></span>
+                                                LinkedIn, Company Announcement
+                                            </div>
+                                            <div class="signal-date">
+                                                <span class="signal-date-icon"><i class="fas fa-calendar-alt"></i></span>
+                                                1 day ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-details">
+                                        FinEdge has appointed Sarah Johnson as their new Chief Technology Officer. Sarah previously led AI/ML teams at Google and has a strong background in financial technology. In her LinkedIn announcement, she mentioned plans to "revolutionize FinEdge's technology stack with a focus on AI and cloud infrastructure."
+                                    </div>
+                                    <div class="signal-strength">
+                                        <span style="font-size: 12px; color: var(--gray);">Signal Strength:</span>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                    </div>
+                                    <div class="signal-actions">
+                                        <button class="button button-secondary button-small">
+                                            <i class="fas fa-bookmark"></i>
+                                            Save
+                                        </button>
+                                        <button class="button button-secondary button-small">
+                                            <i class="fas fa-share"></i>
+                                            Share
+                                        </button>
+                                        <button class="button button-primary button-small">
+                                            <i class="fas fa-bolt"></i>
+                                            Take Action
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="signal-item">
+                                <div class="signal-icon">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <div class="signal-content">
+                                    <div class="signal-header">
+                                        <div class="signal-title">DataSphere Raised $45M in Series C Funding</div>
+                                        <div class="signal-meta">
+                                            <div class="signal-source">
+                                                <span class="signal-source-icon"><i class="fas fa-newspaper"></i></span>
+                                                TechCrunch, Press Release
+                                            </div>
+                                            <div class="signal-date">
+                                                <span class="signal-date-icon"><i class="fas fa-calendar-alt"></i></span>
+                                                3 days ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-details">
+                                        DataSphere has secured $45M in Series C funding led by Sequoia Capital with participation from existing investors. The company plans to use the funding to expand their data analytics platform and accelerate market expansion. CEO Mark Williams stated they will be "significantly investing in growing our enterprise sales team and product capabilities."
+                                    </div>
+                                    <div class="signal-strength">
+                                        <span style="font-size: 12px; color: var(--gray);">Signal Strength:</span>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot"></div>
+                                        <div class="signal-dot"></div>
+                                    </div>
+                                    <div class="signal-actions">
+                                        <button class="button button-secondary button-small">
+                                            <i class="fas fa-bookmark"></i>
+                                            Save
+                                        </button>
+                                        <button class="button button-secondary button-small">
+                                            <i class="fas fa-share"></i>
+                                            Share
+                                        </button>
+                                        <button class="button button-primary button-small">
+                                            <i class="fas fa-bolt"></i>
+                                            Take Action
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="signal-item">
+                                <div class="signal-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="signal-content">
+                                    <div class="signal-header">
+                                        <div class="signal-title">GlobalHealth European Expansion</div>
+                                        <div class="signal-meta">
+                                            <div class="signal-source">
+                                                <span class="signal-source-icon"><i class="fas fa-newspaper"></i></span>
+                                                Press Release, Healthcare Weekly
+                                            </div>
+                                            <div class="signal-date">
+                                                <span class="signal-date-icon"><i class="fas fa-calendar-alt"></i></span>
+                                                1 week ago
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signal-details">
+                                        GlobalHealth announced plans to expand operations into European markets, starting with offices in London and Berlin. They are actively hiring local talent and expecting to grow the European team to 50+ employees by end of year.
+                                    </div>
+                                    <div class="signal-strength">
+                                        <span style="font-size: 12px; color: var(--gray);">Signal Strength:</span>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot active"></div>
+                                        <div class="signal-dot"></div>
+                                        <div class="signal-dot"></div>
+                                    </div>
+                                    <div class="signal-actions">
+                                        <button class="button button-secondary button-small">
+                                            <i class="fas fa-bookmark"></i>
+                                            Save
+                                        </button>
+                                        <button class="button button-secondary button-small">
+                                            <i class="fas fa-share"></i>
+                                            Share
+                                        </button>
+                                        <button class="button button-primary button-small">
+                                            <i class="fas fa-bolt"></i>
+                                            Take Action
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- People Tab -->
+            <div id="people" class="tabs-content">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">People Intelligence</div>
+                        <div class="card-actions">
+                            <button class="button button-secondary button-small">
+                                <i class="fas fa-filter"></i>
+                                Filter
+                            </button>
+                            <button class="button button-primary button-small">
+                                <i class="fas fa-user-plus"></i>
+                                Add Contact
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="people-filters">
+                            <div class="people-filter active">All Contacts</div>
+                            <div class="people-filter">Decision Makers</div>
+                            <div class="people-filter">Champions</div>
+                            <div class="people-filter">New Hires</div>
+                            <div class="people-filter">Technical Roles</div>
+                            <div class="people-filter">Executive Leadership</div>
+                            <div class="people-filter">Recently Active</div>
+                        </div>
+                        
+                        <div class="people-grid">
+                            <div class="person-card">
+                                <div class="person-header">
+                                    <div class="person-avatar">MJ</div>
+                                    <div class="person-info">
+                                        <div class="person-name">
+                                            Michael Johnson
+                                            <span style="color: var(--success); font-size: 14px; margin-left: 5px;">
+                                                <i class="fas fa-check-circle"></i>
+                                            </span>
+                                        </div>
+                                        <div class="person-role">Chief Technology Officer</div>
+                                    </div>
+                                </div>
+                                <div class="person-body">
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-building"></i></div>
+                                        <div>TechNova</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-envelope"></i></div>
+                                        <div>m.johnson@technova.ai</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-phone"></i></div>
+                                        <div>(415) 555-3876</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fab fa-linkedin"></i></div>
+                                        <div>LinkedIn Profile</div>
+                                    </div>
+                                    <div class="person-tags">
+                                        <div class="person-tag">Decision Maker</div>
+                                        <div class="person-tag">Technical Background</div>
+                                        <div class="person-tag">AI Advocate</div>
+                                    </div>
+                                    
+                                    <div style="margin-top: 10px;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                            <div>Influence Score</div>
+                                            <div style="font-weight: 600;">86%</div>
+                                        </div>
+                                        <div class="person-influence">
+                                            <div class="person-influence-bar" style="width: 86%; background-color: var(--primary);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="person-actions">
+                                    <div class="person-action">Email</div>
+                                    <div class="person-action">Call</div>
+                                    <div class="person-action">Meet</div>
+                                </div>
+                            </div>
+                            
+                            <div class="person-card">
+                                <div class="person-header">
+                                    <div class="person-avatar">SJ</div>
+                                    <div class="person-info">
+                                        <div class="person-name">
+                                            Sarah Johnson
+                                            <span class="integration-badge integration-badge-bombora" style="font-size: 10px;">New</span>
+                                        </div>
+                                        <div class="person-role">Chief Technology Officer</div>
+                                    </div>
+                                </div>
+                                <div class="person-body">
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-building"></i></div>
+                                        <div>FinEdge</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-envelope"></i></div>
+                                        <div>sarah.j@finedge.com</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-phone"></i></div>
+                                        <div>(212) 555-4390</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fab fa-linkedin"></i></div>
+                                        <div>LinkedIn Profile</div>
+                                    </div>
+                                    <div class="person-tags">
+                                        <div class="person-tag">Decision Maker</div>
+                                        <div class="person-tag">New Hire</div>
+                                        <div class="person-tag">Ex-Google</div>
+                                    </div>
+                                    
+                                    <div style="margin-top: 10px;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                            <div>Influence Score</div>
+                                            <div style="font-weight: 600;">92%</div>
+                                        </div>
+                                        <div class="person-influence">
+                                            <div class="person-influence-bar" style="width: 92%; background-color: var(--primary);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="person-actions">
+                                    <div class="person-action">Email</div>
+                                    <div class="person-action">Call</div>
+                                    <div class="person-action">Meet</div>
+                                </div>
+                            </div>
+                            
+                            <div class="person-card">
+                                <div class="person-header">
+                                    <div class="person-avatar">AC</div>
+                                    <div class="person-info">
+                                        <div class="person-name">
+                                            Dr. Amelia Chen
+                                            <span class="integration-badge integration-badge-gong" style="font-size: 10px;">Gong</span>
+                                        </div>
+                                        <div class="person-role">VP of Data Science</div>
+                                    </div>
+                                </div>
+                                <div class="person-body">
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-building"></i></div>
+                                        <div>TechNova</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-envelope"></i></div>
+                                        <div>a.chen@technova.ai</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-phone"></i></div>
+                                        <div>(415) 555-4921</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fab fa-linkedin"></i></div>
+                                        <div>LinkedIn Profile</div>
+                                    </div>
+                                    <div class="person-tags">
+                                        <div class="person-tag">Influencer</div>
+                                        <div class="person-tag">New Hire</div>
+                                        <div class="person-tag">Ex-Google</div>
+                                    </div>
+                                    
+                                    <div style="margin-top: 10px;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                            <div>Influence Score</div>
+                                            <div style="font-weight: 600;">78%</div>
+                                        </div>
+                                        <div class="person-influence">
+                                            <div class="person-influence-bar" style="width: 78%; background-color: var(--info);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="person-actions">
+                                    <div class="person-action">Email</div>
+                                    <div class="person-action">Call</div>
+                                    <div class="person-action">Meet</div>
+                                </div>
+                            </div>
+                            
+                            <div class="person-card">
+                                <div class="person-header">
+                                    <div class="person-avatar">RW</div>
+                                    <div class="person-info">
+                                        <div class="person-name">Rebecca Wong</div>
+                                        <div class="person-role">Director of Product</div>
+                                    </div>
+                                </div>
+                                <div class="person-body">
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-building"></i></div>
+                                        <div>TechNova</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-envelope"></i></div>
+                                        <div>r.wong@technova.ai</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-phone"></i></div>
+                                        <div>(415) 555-2354</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fab fa-linkedin"></i></div>
+                                        <div>LinkedIn Profile</div>
+                                    </div>
+                                    <div class="person-tags">
+                                        <div class="person-tag">Champion</div>
+                                        <div class="person-tag">Product-Focused</div>
+                                        <div class="person-tag">Former Customer</div>
+                                    </div>
+                                    
+                                    <div style="margin-top: 10px;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                            <div>Influence Score</div>
+                                            <div style="font-weight: 600;">73%</div>
+                                        </div>
+                                        <div class="person-influence">
+                                            <div class="person-influence-bar" style="width: 73%; background-color: var(--info);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="person-actions">
+                                    <div class="person-action">Email</div>
+                                    <div class="person-action">Call</div>
+                                    <div class="person-action">Meet</div>
+                                </div>
+                            </div>
+                            
+                            <div class="person-card">
+                                <div class="person-header">
+                                    <div class="person-avatar">MW</div>
+                                    <div class="person-info">
+                                        <div class="person-name">
+                                            Mark Williams
+                                            <span style="color: var(--success); font-size: 14px; margin-left: 5px;">
+                                                <i class="fas fa-check-circle"></i>
+                                            </span>
+                                        </div>
+                                        <div class="person-role">Chief Executive Officer</div>
+                                    </div>
+                                </div>
+                                <div class="person-body">
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-building"></i></div>
+                                        <div>DataSphere</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-envelope"></i></div>
+                                        <div>mark@datasphere.io</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-phone"></i></div>
+                                        <div>(650) 555-7619</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fab fa-linkedin"></i></div>
+                                        <div>LinkedIn Profile</div>
+                                    </div>
+                                    <div class="person-tags">
+                                        <div class="person-tag">Decision Maker</div>
+                                        <div class="person-tag">Executive</div>
+                                        <div class="person-tag">Technical Background</div>
+                                    </div>
+                                    
+                                    <div style="margin-top: 10px;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                            <div>Influence Score</div>
+                                            <div style="font-weight: 600;">95%</div>
+                                        </div>
+                                        <div class="person-influence">
+                                            <div class="person-influence-bar" style="width: 95%; background-color: var(--primary);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="person-actions">
+                                    <div class="person-action">Email</div>
+                                    <div class="person-action">Call</div>
+                                    <div class="person-action">Meet</div>
+                                </div>
+                            </div>
+                            
+                            <div class="person-card">
+                                <div class="person-header">
+                                    <div class="person-avatar">DT</div>
+                                    <div class="person-info">
+                                        <div class="person-name">David Thomas</div>
+                                        <div class="person-role">Chief Information Officer</div>
+                                    </div>
+                                </div>
+                                <div class="person-body">
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-building"></i></div>
+                                        <div>TechNova</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-envelope"></i></div>
+                                        <div>d.thomas@technova.ai</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fas fa-phone"></i></div>
+                                        <div>(415) 555-7732</div>
+                                    </div>
+                                    <div class="person-detail">
+                                        <div class="person-detail-icon"><i class="fab fa-linkedin"></i></div>
+                                        <div>LinkedIn Profile</div>
+                                    </div>
+                                    <div class="person-tags">
+                                        <div class="person-tag">Decision Maker</div>
+                                        <div class="person-tag">Budget Holder</div>
+                                        <div class="person-tag">Risk Averse</div>
+                                    </div>
+                                    
+                                    <div style="margin-top: 10px;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 12px;">
+                                            <div>Influence Score</div>
+                                            <div style="font-weight: 600;">82%</div>
+                                        </div>
+                                        <div class="person-influence">
+                                            <div class="person-influence-bar" style="width: 82%; background-color: var(--primary);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="person-actions">
+                                    <div class="person-action">Email</div>
+                                    <div class="person-action">Call</div>
+                                    <div class="person-action">Meet</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other tabs would go here, removed for brevity -->
+
+        </div>
+    </div>
+
+    <!-- Signal AI Assistant with Flash Gordon Lightning Icon -->
+    <div class="signal-ai-assistant">
+        <div class="signal-ai-button" onclick="toggleAIPanel()">
+            <i class="fas fa-bolt flash-icon"></i>
+            <div class="signal-ai-notification">3</div>
+        </div>
+    </div>
+    
+    <div class="signal-ai-panel" id="aiPanel">
+        <div class="signal-ai-header">
+            <div class="signal-ai-title">
+                <div class="signal-ai-icon"><i class="fas fa-bolt flash-icon"></i></div>
+                <div>Signal AI Assistant</div>
+            </div>
+            <div class="signal-ai-close" onclick="toggleAIPanel()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="signal-ai-body">
+            <div class="signal-ai-conversation">
+                <div class="message message-ai">
+                    <div class="message-avatar">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="message-content">
+                        Good morning, Sophie! I've detected several new signals that require your attention:
+                        <div class="message-time">9:02 AM</div>
+                    </div>
+                </div>
+                <div class="message message-ai">
+                    <div class="message-avatar">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="message-content">
+                        1. TechNova launched a digital transformation initiative ($12M budget)
+                        <br>2. FinEdge hired Sarah Johnson as new CTO (ex-Google)
+                        <br>3. DataSphere secured $45M in Series C funding
+                        <div class="message-time">9:02 AM</div>
+                    </div>
+                </div>
+                <div class="message message-user">
+                    <div class="message-avatar">SR</div>
+                    <div class="message-content">
+                        Tell me more about the TechNova initiative. How does it align with our solution?
+                        <div class="message-time">9:05 AM</div>
+                    </div>
+                </div>
+                <div class="message message-ai">
+                    <div class="message-avatar">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="message-content">
+                        TechNova's initiative focuses on modernizing core systems and implementing AI-driven analytics across business units - perfectly aligned with our analytics platform. 
+                        <br><br>
+                        Their primary areas of focus are data consolidation, real-time visualization, and predictive insights, all key strengths of our solution. Michael Johnson (CTO) is leading this project and has previously expressed concerns about data security.
+                        <div class="message-time">9:06 AM</div>
+                    </div>
+                </div>
+                <div class="message message-user">
+                    <div class="message-avatar">SR</div>
+                    <div class="message-content">
+                        Great insight. What's the best next step?
+                        <div class="message-time">9:08 AM</div>
+                    </div>
+                </div>
+                <div class="message message-ai">
+                    <div class="message-avatar">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="message-content">
+                        I recommend scheduling a follow-up meeting with Michael and his team to discuss how our platform can support their digital transformation initiative. 
+                        <br><br>
+                        Be sure to highlight our SOC 2 compliance and advanced security features to address his concerns. I've drafted a meeting request email that emphasizes these points - would you like to review it?
+                        <div class="message-time">9:10 AM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="signal-ai-footer">
+            <div class="signal-ai-input">
+                <input type="text" placeholder="Type your question or command...">
+                <div class="signal-ai-send">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-add">
+        <div class="quick-add-button">
+            <i class="fas fa-plus"></i>
+        </div>
+    </div>
+    
+    <script>
+        function showTab(tabId) {
+            try {
+                // Hide all tabs
+                

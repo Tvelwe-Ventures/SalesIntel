@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#333333">COMPETITIVE RESPONSE STRATEGY MAP</text>
+  
+  <!-- Main grid -->
+  <rect x="50" y="100" width="800" height="550" fill="white" stroke="#dddddd" stroke-width="1"/>
+  
+  <!-- Grid lines -->
+  <line x1="50" y1="250" x2="850" y2="250" stroke="#dddddd" stroke-width="1"/>
+  <line x1="50" y1="400" x2="850" y2="400" stroke="#dddddd" stroke-width="1"/>
+  <line x1="50" y1="550" x2="850" y2="550" stroke="#dddddd" stroke-width="1"/>
+  <line x1="250" y1="100" x2="250" y2="650" stroke="#dddddd" stroke-width="1"/>
+  <line x1="450" y1="100" x2="450" y2="650" stroke="#dddddd" stroke-width="1"/>
+  <line x1="650" y1="100" x2="650" y2="650" stroke="#dddddd" stroke-width="1"/>
+  
+  <!-- Header row - Competitors -->
+  <text x="150" y="125" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#333333">ZoomInfo</text>
+  <text x="350" y="125" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#333333">Salesforce</text>
+  <text x="550" y="125" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#333333">Gong/Chorus</text>
+  <text x="750" y="125" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#333333">6sense/Demandbase</text>
+  
+  <!-- Left column - Strategy areas -->
+  <text x="60" y="175" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333">Anticipated Moves</text>
+  <text x="60" y="325" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333">SalesIntel AI</text>
+  <text x="60" y="345" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333">Positioning</text>
+  <text x="60" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333">SalesIntel AI</text>
+  <text x="60" y="495" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333">Advantage</text>
+  <text x="60" y="600" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333">Risk Mitigation</text>
+  
+  <!-- Cell content -->
+  <!-- ZoomInfo column -->
+  <!-- Anticipated Moves -->
+  <text x="70" y="195" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Expand AI capabilities through acquisitions</text>
+  <text x="70" y="215" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Enhance conversation intelligence (Chorus)</text>
+  <text x="70" y="235" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Add more intent data partnerships</text>
+  
+  <!-- SalesIntel AI Positioning -->
+  <text x="70" y="365" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Intelligence layer atop data foundation</text>
+  <text x="70" y="385" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Superior signal synthesis vs. data collection</text>
+  
+  <!-- SalesIntel AI Advantage -->
+  <text x="70" y="515" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Comprehensive multi-source signals</text>
+  <text x="70" y="535" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Learning system vs. static data</text>
+  
+  <!-- Risk Mitigation -->
+  <text x="70" y="620" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Strategic data partnerships</text>
+  <text x="70" y="640" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Emphasize unique signal sources</text>
+  
+  <!-- Salesforce column -->
+  <!-- Anticipated Moves -->
+  <text x="270" y="195" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Expand Einstein AI capabilities</text>
+  <text x="270" y="215" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Integrate more third-party data</text>
+  <text x="270" y="235" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Enhance native workflow automation</text>
+  
+  <!-- SalesIntel AI Positioning -->
+  <text x="270" y="365" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Complementary to Einstein</text>
+  <text x="270" y="385" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Cross-CRM compatibility focus</text>
+  
+  <!-- SalesIntel AI Advantage -->
+  <text x="270" y="515" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Specialized sales intelligence vs. general CRM</text>
+  <text x="270" y="535" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Deeper external data integration</text>
+  
+  <!-- Risk Mitigation -->
+  <text x="270" y="620" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Strong integration with Salesforce</text>
+  <text x="270" y="640" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Build AppExchange presence</text>
+  
+  <!-- Gong/Chorus column -->
+  <!-- Anticipated Moves -->
+  <text x="470" y="195" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Expand beyond conversation intelligence</text>
+  <text x="470" y="215" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Add LLM capabilities for coaching</text>
+  <text x="470" y="235" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Move into pre-meeting intelligence</text>
+  
+  <!-- SalesIntel AI Positioning -->
+  <text x="470" y="365" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Full-cycle vs. conversation-only intelligence</text>
+  <text x="470" y="385" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Pre-meeting preparation emphasis</text>
+  
+  <!-- SalesIntel AI Advantage -->
+  <text x="470" y="515" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Comprehensive account intelligence</text>
+  <text x="470" y="535" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Strategic guidance vs. conversation analysis</text>
+  
+  <!-- Risk Mitigation -->
+  <text x="470" y="620" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Integrate with conversation intelligence</text>
+  <text x="470" y="640" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Focus on complementary capabilities</text>
+  
+  <!-- 6sense/Demandbase column -->
+  <!-- Anticipated Moves -->
+  <text x="670" y="195" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Expand beyond digital intent signals</text>
+  <text x="670" y="215" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Enhance AI for buying journey mapping</text>
+  <text x="670" y="235" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Add more CRM/workflow integrations</text>
+  
+  <!-- SalesIntel AI Positioning -->
+  <text x="670" y="365" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Broader signal sources beyond digital</text>
+  <text x="670" y="385" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Action guidance vs. predictive analytics</text>
+  
+  <!-- SalesIntel AI Advantage -->
+  <text x="670" y="515" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Company-level intent vs. digital signals</text>
+  <text x="670" y="535" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Workflow integration vs. separate platform</text>
+  
+  <!-- Risk Mitigation -->
+  <text x="670" y="620" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Diversify signal sources beyond digital</text>
+  <text x="670" y="640" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Enhance business initiative detection</text>
+  
+  <!-- Key response principles box -->
+  <rect x="100" y="60" width="700" height="30" rx="5" ry="5" fill="#e8f5e9" stroke="#81c784" stroke-width="1"/>
+  <text x="450" y="80" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Key Strategy: Differentiate on Signal Breadth, Workflow Integration & Action Guidance</text>
+</svg>

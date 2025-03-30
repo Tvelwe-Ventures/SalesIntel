@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+  
+  <!-- Chart area -->
+  <rect x="50" y="50" width="800" height="450" fill="#ffffff" stroke="#dddddd" stroke-width="1"/>
+  
+  <!-- Y-axis -->
+  <line x1="50" y1="50" x2="50" y2="500" stroke="#333333" stroke-width="2"/>
+  <!-- Y-axis labels -->
+  <text x="45" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="end" dominant-baseline="middle" fill="#333333">10</text>
+  <text x="45" y="140" font-family="Arial, sans-serif" font-size="14" text-anchor="end" dominant-baseline="middle" fill="#333333">8</text>
+  <text x="45" y="230" font-family="Arial, sans-serif" font-size="14" text-anchor="end" dominant-baseline="middle" fill="#333333">6</text>
+  <text x="45" y="320" font-family="Arial, sans-serif" font-size="14" text-anchor="end" dominant-baseline="middle" fill="#333333">4</text>
+  <text x="45" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="end" dominant-baseline="middle" fill="#333333">2</text>
+  <text x="45" y="500" font-family="Arial, sans-serif" font-size="14" text-anchor="end" dominant-baseline="middle" fill="#333333">0</text>
+  
+  <!-- Horizontal grid lines -->
+  <line x1="50" y1="50" x2="850" y2="50" stroke="#eeeeee" stroke-width="1"/>
+  <line x1="50" y1="140" x2="850" y2="140" stroke="#eeeeee" stroke-width="1"/>
+  <line x1="50" y1="230" x2="850" y2="230" stroke="#eeeeee" stroke-width="1"/>
+  <line x1="50" y1="320" x2="850" y2="320" stroke="#eeeeee" stroke-width="1"/>
+  <line x1="50" y1="410" x2="850" y2="410" stroke="#eeeeee" stroke-width="1"/>
+  <line x1="50" y1="500" x2="850" y2="500" stroke="#eeeeee" stroke-width="1"/>
+  
+  <!-- X-axis categories -->
+  <!-- Competitive factors -->
+  <text x="100" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Contact</text>
+  <text x="100" y="558" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Data</text>
+  
+  <text x="200" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Intent</text>
+  <text x="200" y="558" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Signals</text>
+  
+  <text x="300" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Data</text>
+  <text x="300" y="558" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Freshness</text>
+  
+  <text x="400" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Workflow</text>
+  <text x="400" y="558" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Integration</text>
+  
+  <text x="500" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">AI</text>
+  <text x="500" y="558" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Capabilities</text>
+  
+  <text x="600" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Signal</text>
+  <text x="600" y="558" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Synthesis</text>
+  
+  <text x="700" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Action</text>
+  <text x="700" y="558" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Guidance</text>
+  
+  <text x="800" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Learning</text>
+  <text x="800" y="558" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">System</text>
+  
+  <!-- Value curves -->
+  <!-- SalesIntel AI -->
+  <polyline points="100,140 200,110 300,170 400,80 500,60 600,70 700,60 800,70" fill="none" stroke="#4285f4" stroke-width="4"/>
+  <!-- Traditional CRM -->
+  <polyline points="100,200 200,350 300,230 400,150 500,320 600,390 700,370 800,400" fill="none" stroke="#ea4335" stroke-width="3"/>
+  <!-- Sales Intelligence Tools -->
+  <polyline points="100,90 200,140 300,150 400,270 500,250 600,320 700,340 800,370" fill="none" stroke="#fbbc05" stroke-width="3"/>
+  <!-- Conversation Intelligence -->
+  <polyline points="100,380 200,360 300,220 400,230 500,180 600,250 700,200 800,230" fill="none" stroke="#34a853" stroke-width="3"/>
+  
+  <!-- Legend -->
+  <rect x="550" y="20" width="280" height="100" fill="white" stroke="#dddddd" stroke-width="1" rx="5" ry="5"/>
+  <line x1="570" y1="40" x2="600" y2="40" stroke="#4285f4" stroke-width="4"/>
+  <text x="610" y="45" font-family="Arial, sans-serif" font-size="14" fill="#333333">SalesIntel AI</text>
+  
+  <line x1="570" y1="70" x2="600" y2="70" stroke="#ea4335" stroke-width="3"/>
+  <text x="610" y="75" font-family="Arial, sans-serif" font-size="14" fill="#333333">Traditional CRM</text>
+  
+  <line x1="570" y1="100" x2="600" y2="100" stroke="#fbbc05" stroke-width="3"/>
+  <text x="610" y="105" font-family="Arial, sans-serif" font-size="14" fill="#333333">Sales Intelligence Tools</text>
+  
+  <line x1="710" y1="70" x2="740" y2="70" stroke="#34a853" stroke-width="3"/>
+  <text x="750" y="75" font-family="Arial, sans-serif" font-size="14" fill="#333333">Conversation Intelligence</text>
+  
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#333333">STRATEGY CANVAS: VALUE DIFFERENTIATION</text>
+  
+  <!-- Y-axis title -->
+  <text x="20" y="275" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" transform="rotate(-90,20,275)" fill="#333333">OFFERING LEVEL</text>
+</svg>

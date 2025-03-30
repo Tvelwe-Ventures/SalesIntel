@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <!-- Background and grid -->
+  <rect width="800" height="800" fill="#f8f9fa"/>
+  
+  <!-- Grid lines -->
+  <line x1="400" y1="0" x2="400" y2="800" stroke="#dddddd" stroke-width="2"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#dddddd" stroke-width="2"/>
+  
+  <!-- Quadrant labels -->
+  <text x="200" y="50" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#555555">NICHE PLAYERS</text>
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#555555">LEADERS</text>
+  <text x="200" y="750" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#555555">CHALLENGERS</text>
+  <text x="600" y="750" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#555555">VISIONARIES</text>
+  
+  <!-- Axis labels -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" font-weight="bold" fill="#333333">COMPLETENESS OF VISION</text>
+  <text x="30" y="400" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" transform="rotate(-90,30,400)" font-weight="bold" fill="#333333">ABILITY TO EXECUTE</text>
+  
+  <!-- Legend for bubble size -->
+  <text x="50" y="80" font-family="Arial, sans-serif" font-size="16" fill="#333333">Bubble size = Market Share</text>
+  
+  <!-- Companies -->
+  <!-- SalesIntel AI (our product) -->
+  <circle cx="650" cy="180" r="45" fill="#4285f4" fill-opacity="0.7"/>
+  <text x="650" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">SalesIntel AI</text>
+  
+  <!-- ZoomInfo -->
+  <circle cx="550" cy="150" r="60" fill="#ea4335" fill-opacity="0.7"/>
+  <text x="550" y="150" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">ZoomInfo</text>
+  
+  <!-- 6sense -->
+  <circle cx="580" cy="550" r="40" fill="#fbbc05" fill-opacity="0.7"/>
+  <text x="580" y="550" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">6sense</text>
+  
+  <!-- Gong -->
+  <circle cx="480" cy="250" r="45" fill="#34a853" fill-opacity="0.7"/>
+  <text x="480" y="250" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">Gong</text>
+  
+  <!-- LinkedIn Sales Navigator -->
+  <circle cx="350" cy="200" r="55" fill="#7e57c2" fill-opacity="0.7"/>
+  <text x="350" y="200" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" fill="white">LinkedIn Sales</text>
+  <text x="350" y="220" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" fill="white">Navigator</text>
+  
+  <!-- Salesforce Einstein -->
+  <circle cx="320" cy="330" r="50" fill="#0097a7" fill-opacity="0.7"/>
+  <text x="320" y="330" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" fill="white">Salesforce</text>
+  <text x="320" y="350" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" fill="white">Einstein</text>
+  
+  <!-- Outreach -->
+  <circle cx="250" cy="480" r="35" fill="#d81b60" fill-opacity="0.7"/>
+  <text x="250" y="480" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">Outreach</text>
+  
+  <!-- Salesloft -->
+  <circle cx="270" cy="550" r="30" fill="#5e35b1" fill-opacity="0.7"/>
+  <text x="270" y="550" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">Salesloft</text>
+  
+  <!-- Apollo -->
+  <circle cx="200" cy="600" r="25" fill="#00897b" fill-opacity="0.7"/>
+  <text x="200" y="600" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">Apollo</text>
+  
+  <!-- Demandbase -->
+  <circle cx="520" cy="500" r="35" fill="#f4511e" fill-opacity="0.7"/>
+  <text x="520" y="500" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">Demandbase</text>
+  
+  <!-- Clearbit -->
+  <circle cx="180" cy="220" r="30" fill="#039be5" fill-opacity="0.7"/>
+  <text x="180" y="220" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">Clearbit</text>
+  
+  <!-- Chorus (ZoomInfo) -->
+  <circle cx="400" cy="270" r="30" fill="#8d6e63" fill-opacity="0.7"/>
+  <text x="400" y="270" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="white">Chorus</text>
+  
+  <!-- Microsoft Dynamics Copilot -->
+  <circle cx="280" cy="380" r="35" fill="#43a047" fill-opacity="0.7"/>
+  <text x="280" y="370" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold" fill="white">Microsoft</text>
+  <text x="280" y="390" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold" fill="white">Dynamics</text>
+  
+  <!-- Title -->
+  <text x="400" y="780" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#333333">SALES INTELLIGENCE MARKET QUADRANT</text>
+</svg>
