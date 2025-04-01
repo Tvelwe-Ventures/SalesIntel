@@ -1,0 +1,2106 @@
+{
+  "accounts": [
+    {
+      "id": "ACC001",
+      "name": "TechNova Systems",
+      "industry": "Software & Technology",
+      "size": "500-1000 employees",
+      "revenue": "$75M",
+      "founded": 2012,
+      "headquarters": "San Francisco, CA",
+      "website": "technova.ai",
+      "description": "AI-powered enterprise software solutions for data analytics and business intelligence",
+      "technologies": ["AWS", "React", "Python", "MongoDB"],
+      "key_people": [
+        {
+          "id": "CON001",
+          "name": "Michael Johnson",
+          "title": "Chief Technology Officer",
+          "email": "m.johnson@technova.ai",
+          "phone": "(415) 555-3876",
+          "linkedin": "linkedin.com/in/michaeljohnson",
+          "influence_level": "Decision Maker",
+          "tags": ["Technical Background", "AI Advocate"]
+        },
+        {
+          "id": "CON002",
+          "name": "Dr. Amelia Chen",
+          "title": "VP of Data Science",
+          "email": "a.chen@technova.ai",
+          "phone": "(415) 555-4921",
+          "linkedin": "linkedin.com/in/ameliachen",
+          "influence_level": "Influencer",
+          "tags": ["New Hire", "Ex-Google"]
+        },
+        {
+          "id": "CON003",
+          "name": "Rebecca Wong",
+          "title": "Director of Product",
+          "email": "r.wong@technova.ai",
+          "phone": "(415) 555-2354",
+          "linkedin": "linkedin.com/in/rebeccawong",
+          "influence_level": "Champion",
+          "tags": ["Product-Focused", "Former Customer"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP001",
+          "name": "Enterprise AI Platform Implementation",
+          "stage": 4,
+          "amount": 250000,
+          "created_date": "2025-01-15",
+          "close_date": "2025-05-30",
+          "probability": 70,
+          "product": "AI Analytics Suite",
+          "primary_contact": "CON001",
+          "signals": [
+            {
+              "id": "SIG001",
+              "type": "company_event",
+              "source": "TechCrunch",
+              "date": "2025-02-10",
+              "title": "Digital Transformation Initiative",
+              "description": "TechNova has launched a comprehensive digital transformation initiative focused on modernizing their core systems and implementing AI-driven analytics across all business units. The project has a $12M budget and is expected to be completed within 18 months.",
+              "relevance_score": 95,
+              "url": "https://techcrunch.com/2025/02/10/technova-digital-transformation"
+            },
+            {
+              "id": "SIG002",
+              "type": "intent_data",
+              "source": "Bombora",
+              "date": "2025-02-15",
+              "title": "Research Interest: AI Analytics Platforms",
+              "description": "Contact has been researching AI analytics platforms with above average intensity over the past 2 weeks.",
+              "relevance_score": 85,
+              "topics": ["AI analytics", "business intelligence", "data visualization"]
+            },
+            {
+              "id": "SIG003",
+              "type": "crm_activity",
+              "source": "Salesforce",
+              "date": "2025-02-18",
+              "title": "Demo Request",
+              "description": "Contact requested product demo through website form.",
+              "relevance_score": 90
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT001",
+              "type": "meeting",
+              "priority": "high",
+              "title": "Executive Briefing on AI Analytics Implementation",
+              "description": "Schedule a meeting with Michael Johnson and his team to discuss their digital transformation initiative and demonstrate how our AI Analytics Suite can accelerate their objectives.",
+              "due_date": "2025-03-01",
+              "suggested_participants": ["Account Executive", "Solutions Architect"],
+              "talking_points": [
+                "Address their $12M digital transformation budget and timeline",
+                "Demonstrate AI analytics capabilities specific to their industry",
+                "Connect with Dr. Chen's background in AI research at Google",
+                "Discuss integration with their existing AWS infrastructure"
+              ],
+              "supporting_materials": ["Digital Transformation Case Study", "AI Analytics Implementation Guide"],
+              "insight_source": ["SIG001", "SIG002"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ACC002",
+      "name": "FinEdge Capital",
+      "industry": "Financial Services",
+      "size": "1000-5000 employees",
+      "revenue": "$320M",
+      "founded": 2005,
+      "headquarters": "New York, NY",
+      "website": "finedgecapital.com",
+      "description": "Innovative wealth management and financial technology solutions",
+      "technologies": ["Oracle", "Java", "Tableau", "Snowflake"],
+      "key_people": [
+        {
+          "id": "CON010",
+          "name": "Sarah Williams",
+          "title": "Chief Information Officer",
+          "email": "s.williams@finedgecapital.com",
+          "phone": "(212) 555-7890",
+          "linkedin": "linkedin.com/in/sarahwilliams",
+          "influence_level": "Decision Maker",
+          "tags": ["Digital Transformation", "Technology Leader"]
+        },
+        {
+          "id": "CON011",
+          "name": "Robert Chen",
+          "title": "VP of Digital Transformation",
+          "email": "r.chen@finedgecapital.com",
+          "phone": "(212) 555-7891",
+          "linkedin": "linkedin.com/in/robertchen",
+          "influence_level": "Champion",
+          "tags": ["Innovation Focus", "Process Improvement"]
+        },
+        {
+          "id": "CON012",
+          "name": "Jessica Parker",
+          "title": "Head of Data Strategy",
+          "email": "j.parker@finedgecapital.com",
+          "phone": "(212) 555-7892",
+          "linkedin": "linkedin.com/in/jessicaparker",
+          "influence_level": "Influencer",
+          "tags": ["Data Governance", "Analytics Expert"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP010",
+          "name": "Data Analytics Platform Migration",
+          "stage": 3,
+          "amount": 450000,
+          "created_date": "2025-01-10",
+          "close_date": "2025-06-15",
+          "probability": 55,
+          "product": "Enterprise Data Platform",
+          "primary_contact": "CON010",
+          "signals": [
+            {
+              "id": "SIG010",
+              "type": "hiring_pattern",
+              "source": "LinkedIn",
+              "date": "2025-01-28",
+              "title": "Data Engineering Hiring Surge",
+              "description": "FinEdge has posted 5 new data engineering positions in the last month, indicating investment in data infrastructure.",
+              "relevance_score": 75,
+              "url": "https://linkedin.com/company/finedge/jobs"
+            },
+            {
+              "id": "SIG011",
+              "type": "crm_activity",
+              "source": "Salesforce",
+              "date": "2025-02-05",
+              "title": "Infrastructure Assessment Request",
+              "description": "Company requested information about migration services and timeframes.",
+              "relevance_score": 80
+            }
+          ],
+          "next_actions": []
+        },
+        {
+          "id": "OPP011",
+          "name": "Wealth Management AI Solution",
+          "stage": 5,
+          "amount": 780000,
+          "created_date": "2024-11-15",
+          "close_date": "2025-04-30",
+          "probability": 85,
+          "product": "AI Investment Advisory Platform",
+          "primary_contact": "CON011",
+          "signals": [
+            {
+              "id": "SIG012",
+              "type": "news_event",
+              "source": "Financial Times",
+              "date": "2025-01-20",
+              "title": "Expansion into European Markets",
+              "description": "FinEdge Capital announces plans to expand wealth management services to European markets starting Q3 2025.",
+              "relevance_score": 90,
+              "url": "https://ft.com/content/finedge-european-expansion"
+            },
+            {
+              "id": "SIG013",
+              "type": "intent_data",
+              "source": "Bombora",
+              "date": "2025-02-10",
+              "title": "Research on AI Wealth Management Solutions",
+              "description": "Multiple stakeholders researching AI-driven portfolio management and compliance topics.",
+              "relevance_score": 85,
+              "topics": ["AI wealth management", "financial compliance", "portfolio optimization"]
+            },
+            {
+              "id": "SIG014",
+              "type": "competitor_activity",
+              "source": "CRM Notes",
+              "date": "2025-02-15",
+              "title": "Competitive Vendor Evaluation",
+              "description": "Client mentioned evaluating solutions from FinAI and WealthTech alongside our offering.",
+              "relevance_score": 95
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT010",
+              "type": "proposal_update",
+              "priority": "high",
+              "title": "Update Proposal with European Compliance Features",
+              "description": "Revise the current proposal to highlight EU-specific compliance features to support their European expansion.",
+              "due_date": "2025-02-28",
+              "suggested_participants": ["Account Executive", "Solution Consultant", "Compliance Specialist"],
+              "talking_points": [
+                "GDPR compliance features",
+                "Multi-currency support",
+                "MiFID II regulatory alignment",
+                "European market customizations"
+              ],
+              "supporting_materials": ["European Financial Regulations Overview", "Compliance Feature Sheet"],
+              "insight_source": ["SIG012"]
+            },
+            {
+              "id": "ACT011",
+              "type": "competitive_differentiation",
+              "priority": "medium",
+              "title": "Prepare Competitive Differentiation Materials",
+              "description": "Create specific materials highlighting advantages over FinAI and WealthTech solutions.",
+              "due_date": "2025-03-05",
+              "suggested_participants": ["Product Marketing", "Account Executive"],
+              "talking_points": [
+                "Advanced AI capabilities comparison",
+                "Implementation timeline advantages",
+                "Integration superiority with existing systems",
+                "Customer success metrics against competitors"
+              ],
+              "supporting_materials": ["Competitive Comparison Matrix", "Customer ROI Case Studies"],
+              "insight_source": ["SIG014"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ACC003",
+      "name": "MediFuture Health",
+      "industry": "Healthcare",
+      "size": "5000-10000 employees",
+      "revenue": "$1.2B",
+      "founded": 1998,
+      "headquarters": "Boston, MA",
+      "website": "medifuture.org",
+      "description": "Leading healthcare provider specializing in innovative medical technologies and patient care",
+      "technologies": ["Epic", "Microsoft Azure", "Hadoop", "Tableau"],
+      "key_people": [
+        {
+          "id": "CON020",
+          "name": "Dr. James Wilson",
+          "title": "Chief Medical Information Officer",
+          "email": "j.wilson@medifuture.org",
+          "phone": "(617) 555-3210",
+          "linkedin": "linkedin.com/in/jameswilson",
+          "influence_level": "Decision Maker",
+          "tags": ["Medical Innovation", "Technology Adoption"]
+        },
+        {
+          "id": "CON021",
+          "name": "Elizabeth Chen",
+          "title": "VP of Data and Analytics",
+          "email": "e.chen@medifuture.org",
+          "phone": "(617) 555-3211",
+          "linkedin": "linkedin.com/in/elizabethchen",
+          "influence_level": "Influencer",
+          "tags": ["Data Science", "Healthcare Analytics"]
+        },
+        {
+          "id": "CON022",
+          "name": "Thomas Garcia",
+          "title": "Director of IT Infrastructure",
+          "email": "t.garcia@medifuture.org",
+          "phone": "(617) 555-3212",
+          "linkedin": "linkedin.com/in/thomasgarcia",
+          "influence_level": "Technical Evaluator",
+          "tags": ["Infrastructure", "Security Focus"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP020",
+          "name": "Patient Data Analytics Platform",
+          "stage": 4,
+          "amount": 1250000,
+          "created_date": "2024-12-05",
+          "close_date": "2025-05-15",
+          "probability": 65,
+          "product": "Healthcare Analytics Suite",
+          "primary_contact": "CON020",
+          "signals": [
+            {
+              "id": "SIG020",
+              "type": "hiring_pattern",
+              "source": "LinkedIn Jobs",
+              "date": "2025-01-18",
+              "title": "Hiring for Data Science Team",
+              "description": "MediFuture has posted multiple job openings for healthcare data scientists and ML engineers.",
+              "relevance_score": 80,
+              "url": "https://linkedin.com/company/medifuture/jobs"
+            },
+            {
+              "id": "SIG021",
+              "type": "regulatory_change",
+              "source": "Healthcare Regulatory News",
+              "date": "2025-02-01",
+              "title": "New Data Privacy Compliance Requirements",
+              "description": "Recent healthcare regulations introduce stricter requirements for patient data processing and analytics.",
+              "relevance_score": 90,
+              "url": "https://healthcareregulatory.com/2025/new-privacy-standards"
+            },
+            {
+              "id": "SIG022",
+              "type": "funding_news",
+              "source": "MedTech Today",
+              "date": "2025-02-10",
+              "title": "Research Grant for Predictive Care",
+              "description": "MediFuture received a $10M grant to develop predictive analytics for patient care outcomes.",
+              "relevance_score": 85,
+              "url": "https://medtechtoday.com/medifuture-predictive-care-grant"
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT020",
+              "type": "executive_briefing",
+              "priority": "critical",
+              "title": "Privacy Compliance Executive Briefing",
+              "description": "Arrange a briefing with Dr. Wilson and compliance team on how our solution addresses the new regulatory requirements.",
+              "due_date": "2025-02-25",
+              "suggested_participants": ["Account Executive", "Solutions Architect", "Compliance Officer"],
+              "talking_points": [
+                "Specific features that address new compliance requirements",
+                "Data anonymization and encryption capabilities",
+                "Audit trail and governance controls",
+                "Compliance certification and documentation"
+              ],
+              "supporting_materials": ["Healthcare Compliance Whitepaper", "Regulatory Certification Documentation"],
+              "insight_source": ["SIG021"]
+            },
+            {
+              "id": "ACT021",
+              "type": "solution_alignment",
+              "priority": "high",
+              "title": "Predictive Care Grant Alignment",
+              "description": "Develop custom presentation showing how our analytics platform supports their grant-funded predictive care initiatives.",
+              "due_date": "2025-03-05",
+              "suggested_participants": ["Data Science Specialist", "Account Executive"],
+              "talking_points": [
+                "Alignment with grant objectives and timeline",
+                "Predictive modeling capabilities for patient outcomes",
+                "Case studies from similar research initiatives",
+                "Technical architecture for research data processing"
+              ],
+              "supporting_materials": ["Predictive Healthcare Analytics Overview", "Research Institution Case Study"],
+              "insight_source": ["SIG022"]
+            }
+          ]
+        },
+        {
+          "id": "OPP021",
+          "name": "Telehealth Platform Expansion",
+          "stage": 2,
+          "amount": 650000,
+          "created_date": "2025-01-25",
+          "close_date": "2025-07-30",
+          "probability": 35,
+          "product": "Virtual Care Suite",
+          "primary_contact": "CON022",
+          "signals": [
+            {
+              "id": "SIG023",
+              "type": "webpage_update",
+              "source": "Website Monitoring",
+              "date": "2025-02-05",
+              "title": "Telehealth Service Announcement",
+              "description": "MediFuture added a new section to their website announcing expanded telehealth services.",
+              "relevance_score": 75,
+              "url": "https://medifuture.org/services/telehealth"
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC004",
+      "name": "GlobalShip Logistics",
+      "industry": "Transportation & Logistics",
+      "size": "10000+ employees",
+      "revenue": "$3.5B",
+      "founded": 1985,
+      "headquarters": "Rotterdam, Netherlands",
+      "website": "globalship.com",
+      "description": "International shipping and logistics corporation with operations in 45 countries",
+      "technologies": ["SAP", "Oracle Transportation Management", "Kubernetes", "PowerBI"],
+      "key_people": [
+        {
+          "id": "CON030",
+          "name": "Hendrik van der Meer",
+          "title": "Chief Digital Officer",
+          "email": "h.vandermeer@globalship.com",
+          "phone": "+31 10 555 4321",
+          "linkedin": "linkedin.com/in/hendrikvandermeer",
+          "influence_level": "Decision Maker",
+          "tags": ["Digital Transformation", "Innovation"]
+        },
+        {
+          "id": "CON031",
+          "name": "Sophia Rodriguez",
+          "title": "VP of Supply Chain Solutions",
+          "email": "s.rodriguez@globalship.com",
+          "phone": "+31 10 555 4322",
+          "linkedin": "linkedin.com/in/sophiarodriguez",
+          "influence_level": "Champion",
+          "tags": ["Supply Chain Expert", "Operational Excellence"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP030",
+          "name": "Global Supply Chain Visibility Platform",
+          "stage": 5,
+          "amount": 1800000,
+          "created_date": "2024-10-15",
+          "close_date": "2025-03-31",
+          "probability": 85,
+          "product": "Supply Chain Intelligence Suite",
+          "primary_contact": "CON030",
+          "signals": [
+            {
+              "id": "SIG030",
+              "type": "earnings_call",
+              "source": "Investor Relations",
+              "date": "2025-01-15",
+              "title": "Digital Transformation Investment Announcement",
+              "description": "CEO announced $50M investment in supply chain digitization during quarterly earnings call.",
+              "relevance_score": 95,
+              "url": "https://globalship.com/investors/earnings/q4-2024"
+            },
+            {
+              "id": "SIG031",
+              "type": "crm_activity",
+              "source": "Salesforce",
+              "date": "2025-01-28",
+              "title": "Solution Architecture Workshop",
+              "description": "Technical team participated in a 2-day architecture workshop to finalize solution design.",
+              "relevance_score": 100
+            },
+            {
+              "id": "SIG032",
+              "type": "social_media",
+              "source": "LinkedIn",
+              "date": "2025-02-10",
+              "title": "CDO Posts About Digital Supply Chain",
+              "description": "Hendrik van der Meer shared article about digital supply chain transformation and tagged our company.",
+              "relevance_score": 85,
+              "url": "https://linkedin.com/posts/hendrikvandermeer-supply-chain-digital"
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT030",
+              "type": "contract_review",
+              "priority": "critical",
+              "title": "Legal Team Contract Review",
+              "description": "Schedule final contract review with legal teams to address international data handling clauses.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Account Executive", "Legal Counsel", "Solution Architect"],
+              "talking_points": [
+                "International data sovereignty compliance",
+                "Service level agreements for global operations",
+                "Implementation timeline and milestones",
+                "Risk mitigation and contingency planning"
+              ],
+              "supporting_materials": ["Contract Template", "Legal Compliance Checklist"],
+              "insight_source": ["SIG031"]
+            },
+            {
+              "id": "ACT031",
+              "type": "executive_engagement",
+              "priority": "high",
+              "title": "CEO Briefing on Digital Transformation Alignment",
+              "description": "Prepare executive briefing showing how our solution supports their $50M digital transformation investment.",
+              "due_date": "2025-02-25",
+              "suggested_participants": ["Executive Sponsor", "Account Executive"],
+              "talking_points": [
+                "ROI timeline for digital transformation investment",
+                "KPIs and success metrics alignment",
+                "Strategic roadmap and future capabilities",
+                "Competitive advantage creation"
+              ],
+              "supporting_materials": ["Executive ROI Dashboard", "Strategic Roadmap", "Competitive Advantage Analysis"],
+              "insight_source": ["SIG030"]
+            }
+          ]
+        },
+        {
+          "id": "OPP031",
+          "name": "Fleet Management Analytics",
+          "stage": 3,
+          "amount": 750000,
+          "created_date": "2025-01-10",
+          "close_date": "2025-06-15",
+          "probability": 50,
+          "product": "Fleet Optimization Solution",
+          "primary_contact": "CON031",
+          "signals": [
+            {
+              "id": "SIG033",
+              "type": "industry_news",
+              "source": "Logistics Weekly",
+              "date": "2025-01-20",
+              "title": "GlobalShip Announces Fleet Expansion",
+              "description": "Company plans to add 50 new vessels to its fleet over the next two years.",
+              "relevance_score": 80,
+              "url": "https://logisticsweekly.com/globalship-fleet-expansion"
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC005",
+      "name": "Quantum Retail Group",
+      "industry": "Retail",
+      "size": "1000-5000 employees",
+      "revenue": "$420M",
+      "founded": 2008,
+      "headquarters": "Chicago, IL",
+      "website": "quantumretail.com",
+      "description": "Innovative omnichannel retailer specializing in consumer electronics and smart home products",
+      "technologies": ["Shopify Plus", "NetSuite", "Google Cloud", "Looker"],
+      "key_people": [
+        {
+          "id": "CON040",
+          "name": "Alexandra Kim",
+          "title": "Chief Customer Officer",
+          "email": "a.kim@quantumretail.com",
+          "phone": "(312) 555-8765",
+          "linkedin": "linkedin.com/in/alexandrakim",
+          "influence_level": "Decision Maker",
+          "tags": ["Customer Experience", "Digital Retail"]
+        },
+        {
+          "id": "CON041",
+          "name": "Marcus Johnson",
+          "title": "Director of E-Commerce",
+          "email": "m.johnson@quantumretail.com",
+          "phone": "(312) 555-8766",
+          "linkedin": "linkedin.com/in/marcusjohnson",
+          "influence_level": "Champion",
+          "tags": ["E-Commerce Expert", "Growth Focus"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP040",
+          "name": "Customer Data Platform Implementation",
+          "stage": 4,
+          "amount": 550000,
+          "created_date": "2024-12-12",
+          "close_date": "2025-04-30",
+          "probability": 75,
+          "product": "Retail Customer Intelligence Platform",
+          "primary_contact": "CON040",
+          "signals": [
+            {
+              "id": "SIG040",
+              "type": "press_release",
+              "source": "Business Wire",
+              "date": "2025-01-05",
+              "title": "Quantum Retail Announces Loyalty Program Overhaul",
+              "description": "Company plans to relaunch customer loyalty program with enhanced personalization capabilities.",
+              "relevance_score": 90,
+              "url": "https://businesswire.com/news/quantum-retail-loyalty-program"
+            },
+            {
+              "id": "SIG041",
+              "type": "intent_data",
+              "source": "Bombora",
+              "date": "2025-01-18",
+              "title": "Research on Customer Data Platforms",
+              "description": "Multiple stakeholders researching CDP implementation and best practices.",
+              "relevance_score": 85,
+              "topics": ["customer data platforms", "retail personalization", "loyalty programs"]
+            },
+            {
+              "id": "SIG042",
+              "type": "demo_activity",
+              "source": "Salesforce",
+              "date": "2025-02-01",
+              "title": "Personalization Demo Engagement",
+              "description": "High engagement during personalization engine demo with extended Q&A session.",
+              "relevance_score": 90
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT040",
+              "type": "proof_of_concept",
+              "priority": "high",
+              "title": "Personalization Engine Proof of Concept",
+              "description": "Build a POC using their actual customer data to demonstrate personalization capabilities.",
+              "due_date": "2025-02-28",
+              "suggested_participants": ["Solution Engineer", "Data Scientist", "Account Executive"],
+              "talking_points": [
+                "Loyalty program integration points",
+                "Personalization use cases aligned with their goals",
+                "Performance metrics and expected lift",
+                "Implementation timeline and resource requirements"
+              ],
+              "supporting_materials": ["POC Implementation Plan", "Sample Dashboard Mockups"],
+              "insight_source": ["SIG040", "SIG042"]
+            },
+            {
+              "id": "ACT041",
+              "type": "reference_introduction",
+              "priority": "medium",
+              "title": "Introduction to Similar Retail Reference",
+              "description": "Arrange call with Fashion Forward Retail (similar size retailer) to discuss their implementation experience.",
+              "due_date": "2025-03-10",
+              "suggested_participants": ["Account Executive", "Customer Success Manager"],
+              "talking_points": [
+                "Implementation timeline and challenges",
+                "ROI achieved from personalization",
+                "Technical integration insights",
+                "Change management best practices"
+              ],
+              "supporting_materials": ["Case Study", "Implementation Timeline Template"],
+              "insight_source": ["SIG041"]
+            }
+          ]
+        },
+        {
+          "id": "OPP041",
+          "name": "In-Store Analytics Solution",
+          "stage": 2,
+          "amount": 350000,
+          "created_date": "2025-01-20",
+          "close_date": "2025-07-15",
+          "probability": 30,
+          "product": "Retail Analytics Platform",
+          "primary_contact": "CON041",
+          "signals": [
+            {
+              "id": "SIG043",
+              "type": "event_attendance",
+              "source": "Event Management System",
+              "date": "2025-01-25",
+              "title": "Retail Innovation Conference Attendance",
+              "description": "Team members attended our session on in-store analytics at Retail Innovation Conference.",
+              "relevance_score": 70
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC006",
+      "name": "EcoBuilt Construction",
+      "industry": "Construction",
+      "size": "500-1000 employees",
+      "revenue": "$180M",
+      "founded": 2010,
+      "headquarters": "Portland, OR",
+      "website": "ecobuilt.com",
+      "description": "Sustainable commercial construction company specializing in eco-friendly building methods and materials",
+      "technologies": ["Procore", "Autodesk BIM 360", "Microsoft Dynamics", "Tableau"],
+      "key_people": [
+        {
+          "id": "CON050",
+          "name": "Daniel Foster",
+          "title": "Chief Operations Officer",
+          "email": "d.foster@ecobuilt.com",
+          "phone": "(503) 555-1234",
+          "linkedin": "linkedin.com/in/danielfoster",
+          "influence_level": "Decision Maker",
+          "tags": ["Operations Expert", "Sustainability Focus"]
+        },
+        {
+          "id": "CON051",
+          "name": "Maya Rodriguez",
+          "title": "Director of Digital Transformation",
+          "email": "m.rodriguez@ecobuilt.com",
+          "phone": "(503) 555-1235",
+          "linkedin": "linkedin.com/in/mayarodriguez",
+          "influence_level": "Champion",
+          "tags": ["Technology Advocate", "Process Improvement"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP050",
+          "name": "Construction Project Analytics Platform",
+          "stage": 3,
+          "amount": 420000,
+          "created_date": "2025-01-05",
+          "close_date": "2025-05-30",
+          "probability": 60,
+          "product": "Project Intelligence Suite",
+          "primary_contact": "CON051",
+          "signals": [
+            {
+              "id": "SIG050",
+              "type": "contract_win",
+              "source": "Construction Weekly",
+              "date": "2025-01-15",
+              "title": "EcoBuilt Wins $50M Government Contract",
+              "description": "Company secured major government contract for sustainable building project with strict reporting requirements.",
+              "relevance_score": 85,
+              "url": "https://constructionweekly.com/ecobuilt-government-contract"
+            },
+            {
+              "id": "SIG051",
+              "type": "website_visit",
+              "source": "Web Analytics",
+              "date": "2025-01-28",
+              "title": "Multiple Visits to Analytics Solutions Page",
+              "description": "Key stakeholders visited product pages multiple times, downloading relevant whitepapers.",
+              "relevance_score": 75
+            }
+          ],
+          "next_actions": []
+        },
+        {
+          "id": "OPP051",
+          "name": "Sustainability Reporting Solution",
+          "stage": 4,
+          "amount": 280000,
+          "created_date": "2024-12-10",
+          "close_date": "2025-03-31",
+          "probability": 70,
+          "product": "ESG Reporting Platform",
+          "primary_contact": "CON050",
+          "signals": [
+            {
+              "id": "SIG052",
+              "type": "regulatory_change",
+              "source": "Environmental Compliance News",
+              "date": "2025-01-10",
+              "title": "New Sustainability Reporting Requirements",
+              "description": "New regulations require enhanced environmental impact reporting for construction projects.",
+              "relevance_score": 90,
+              "url": "https://envcompliancenews.com/construction-reporting-requirements"
+            },
+            {
+              "id": "SIG053",
+              "type": "competitor_activity",
+              "source": "CRM Notes",
+              "date": "2025-01-25",
+              "title": "Competitor Demo Scheduled",
+              "description": "Customer mentioned upcoming demo with GreenReporting Inc. next week.",
+              "relevance_score": 95
+            },
+            {
+              "id": "SIG054",
+              "type": "intent_data",
+              "source": "Bombora",
+              "date": "2025-02-05",
+              "title": "Research on Sustainability Metrics",
+              "description": "Team researching construction sustainability metrics and reporting methodologies.",
+              "relevance_score": 80,
+              "topics": ["construction sustainability", "environmental reporting", "ESG metrics"]
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT050",
+              "type": "competitive_response",
+              "priority": "critical",
+              "title": "Counter-Competitive Demo Preparation",
+              "description": "Prepare targeted presentation addressing advantages over GreenReporting Inc. offering.",
+              "due_date": "2025-02-15",
+              "suggested_participants": ["Account Executive", "Solution Engineer", "Product Marketing"],
+              "talking_points": [
+                "Specific differentiators from GreenReporting Inc.",
+                "Unique capabilities for construction-specific reporting",
+                "Integration advantages with existing systems",
+                "Customer success stories in construction industry"
+              ],
+              "supporting_materials": ["Competitive Comparison Sheet", "Construction Case Studies"],
+              "insight_source": ["SIG053"]
+            },
+            {
+              "id": "ACT051",
+              "type": "regulatory_alignment",
+              "priority": "high",
+              "title": "Regulatory Compliance Demonstration",
+              "description": "Create specific material showing how our solution addresses the new environmental reporting requirements.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Solution Consultant", "Compliance Specialist"],
+              "talking_points": [
+                "Specific reporting capabilities for new regulations",
+                "Automated compliance validation features",
+                "Audit trail and documentation capabilities",
+                "Implementation timeline to meet regulatory deadlines"
+              ],
+              "supporting_materials": ["Regulatory Compliance Matrix", "Reporting Templates"],
+              "insight_source": ["SIG052"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ACC007",
+      "name": "InnoEdu Learning",
+      "industry": "Education Technology",
+      "size": "100-500 employees",
+      "revenue": "$45M",
+      "founded": 2015,
+      "headquarters": "Austin, TX",
+      "website": "innoedu.com",
+      "description": "Educational technology company providing digital learning platforms and content for K-12 and higher education",
+      "technologies": ["AWS", "React", "Node.js", "MongoDB"],
+      "key_people": [
+        {
+          "id": "CON060",
+          "name": "Patricia Nguyen",
+          "title": "Chief Product Officer",
+          "email": "p.nguyen@innoedu.com",
+          "phone": "(512) 555-9876",
+          "linkedin": "linkedin.com/in/patricanguyen",
+          "influence_level": "Decision Maker",
+          "tags": ["Product Strategy", "EdTech Innovation"]
+        },
+        {
+          "id": "CON061",
+          "name": "Kevin Washington",
+          "title": "Director of Engineering",
+          "email": "k.washington@innoedu.com",
+          "phone": "(512) 555-9877",
+          "linkedin": "linkedin.com/in/kevinwashington",
+          "influence_level": "Technical Evaluator",
+          "tags": ["Technical Architecture", "Development Lead"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP060",
+          "name": "Learning Analytics Platform",
+          "stage": 5,
+          "amount": 320000,
+          "created_date": "2024-11-20",
+          "close_date": "2025-03-15",
+          "probability": 85,
+          "product": "Education Intelligence Suite",
+          "primary_contact": "CON060",
+          "signals": [
+            {
+              "id": "SIG060",
+              "type": "funding_news",
+              "source": "EdTech Today",
+              "date": "2025-01-05",
+              "title": "InnoEdu Secures $25M Series C Funding",
+              "description": "Company raises $25M to accelerate product development and expand analytics capabilities.",
+              "relevance_score": 90,
+              "url": "https://edtechtoday.com/innoedu-funding-round"
+            },
+            {
+              "id": "SIG061",
+              "type": "product_roadmap",
+              "source": "Investor Presentation",
+              "date": "2025-01-15",
+              "title": "Analytics-Focused Roadmap",
+              "description": "Company published investor presentation highlighting analytics as key strategic priority.",
+              "relevance_score": 85,
+              "url": "https://innoedu.com/investors/roadmap-2025"
+            },
+            {
+              "id": "SIG062",
+              "type": "crm_activity",
+              "source": "Salesforce",
+              "date": "2025-02-01",
+              "title": "Contract Review Session",
+              "description": "Legal team completed initial contract review with minor comments.",
+              "relevance_score": 95
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT060",
+              "type": "contract_finalization",
+              "priority": "critical",
+              "title": "Address Contract Review Comments",
+              "description": "Review legal team's comments and finalize contract terms for signature.",
+              "due_date": "2025-02-10",
+              "suggested_participants": ["Account Executive", "Legal Counsel"],
+              "talking_points": [
+                "Service level agreement adjustments",
+                "Implementation timeline commitments",
+                "Data ownership clarifications",
+                "Maintenance and support terms"
+              ],
+              "supporting_materials": ["Annotated Contract", "SLA Documentation"],
+              "insight_source": ["SIG062"]
+            },
+            {
+              "id": "ACT061",
+              "type": "implementation_planning",
+              "priority": "high",
+              "title": "Pre-Implementation Planning Session",
+              "description": "Schedule planning session to outline implementation phases and resource requirements.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Implementation Manager", "Solution Architect", "Customer Success Manager"],
+              "talking_points": [
+                "Data migration strategy",
+                "User onboarding and training plan",
+                "Integration with existing systems",
+                "Success metrics and tracking"
+              ],
+              "supporting_materials": ["Implementation Methodology", "Project Plan Template"],
+              "insight_source": ["SIG060", "SIG061"]
+            }
+          ]
+        },
+        {
+          "id": "OPP061",
+          "name": "Content Personalization Engine",
+          "stage": 2,
+          "amount": 180000,
+          "created_date": "2025-01-25",
+          "close_date": "2025-06-30",
+          "probability": 40,
+          "product": "Adaptive Learning Platform",
+          "primary_contact": "CON061",
+          "signals": [
+            {
+              "id": "SIG063",
+              "type": "job_posting",
+              "source": "LinkedIn Jobs",
+              "date": "2025-02-01",
+              "title": "AI Learning Specialist Role",
+              "description": "Company posted job opening for AI specialist focused on personalized learning experiences.",
+              "relevance_score": 75,
+              "url": "https://linkedin.com/jobs/innoedu-ai-learning-specialist"
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC008",
+      "name": "NexGen Energy",
+      "industry": "Energy & Utilities",
+      "size": "1000-5000 employees",
+      "revenue": "$750M",
+      "founded": 2002,
+      "headquarters": "Denver, CO",
+      "website": "nexgenenergy.com",
+      "description": "Renewable energy provider specializing in solar, wind, and energy storage solutions",
+      "technologies": ["SAP", "Microsoft Azure", "GE Digital", "Tableau"],
+      "key_people": [
+        {
+          "id": "CON070",
+          "name": "Richard Martinez",
+          "title": "Chief Information Officer",
+          "email": "r.martinez@nexgenenergy.com",
+          "phone": "(720) 555-6543",
+          "linkedin": "linkedin.com/in/richardmartinez",
+          "influence_level": "Decision Maker",
+          "tags": ["Digital Transformation", "IT Strategy"]
+        },
+        {
+          "id": "CON071",
+          "name": "Lisa Chen",
+          "title": "VP of Operations",
+          "email": "l.chen@nexgenenergy.com",
+          "phone": "(720) 555-6544",
+          "linkedin": "linkedin.com/in/lisachen",
+          "influence_level": "Influencer",
+          "tags": ["Operational Excellence", "Process Optimization"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP070",
+          "name": "Energy Grid Analytics Platform",
+          "stage": 4,
+          "amount": 950000,
+          "created_date": "2024-12-05",
+          "close_date": "2025-04-30",
+          "probability": 70,
+          "product": "Grid Intelligence Platform",
+          "primary_contact": "CON070",
+          "signals": [
+            {
+              "id": "SIG070",
+              "type": "acquisition_news",
+              "source": "Energy Business Review",
+              "date": "2025-01-10",
+              "title": "NexGen Acquires Regional Solar Provider",
+              "description": "Company acquired SolarWest to expand its renewable energy portfolio and geographic reach.",
+              "relevance_score": 85,
+              "url": "https://energybusinessreview.com/nexgen-acquires-solarwest"
+            },
+            {
+              "id": "SIG071",
+              "type": "intent_data",
+              "source": "Bombora",
+              "date": "2025-01-25",
+              "title": "Research on Grid Management Solutions",
+              "description": "Multiple stakeholders researching advanced grid management and analytics solutions.",
+              "relevance_score": 90,
+              "topics": ["energy grid analytics", "renewable integration", "predictive maintenance"]
+            },
+            {
+              "id": "SIG072",
+              "type": "industry_trend",
+              "source": "Energy Market Report",
+              "date": "2025-02-05",
+              "title": "Regulatory Changes for Grid Modernization",
+              "description": "New industry regulations incentivize investment in grid modernization and analytics capabilities.",
+              "relevance_score": 80,
+              "url": "https://energymarketreport.com/grid-modernization-incentives"
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT070",
+              "type": "solution_expansion",
+              "priority": "high",
+              "title": "Acquisition Integration Strategy",
+              "description": "Develop proposal showing how our platform can help integrate the acquired SolarWest assets.",
+              "due_date": "2025-02-15",
+              "suggested_participants": ["Solution Architect", "Account Executive"],
+              "talking_points": [
+                "Systems integration approach for acquired assets",
+                "Data consolidation strategy",
+                "Unified analytics across combined operations",
+                "Accelerated time-to-value for acquisition"
+              ],
+              "supporting_materials": ["Acquisition Integration Guide", "Case Study: Post-Acquisition Integration"],
+              "insight_source": ["SIG070"]
+            },
+            {
+              "id": "ACT071",
+              "type": "industry_alignment",
+              "priority": "medium",
+              "title": "Regulatory Incentive Analysis",
+              "description": "Create analysis showing ROI impact when factoring in new regulatory incentives.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Account Executive", "Solution Consultant"],
+              "talking_points": [
+                "Specific incentive qualification criteria",
+                "ROI enhancement from incentives",
+                "Compliance reporting capabilities",
+                "Implementation timeline to capture incentives"
+              ],
+              "supporting_materials": ["Regulatory Incentive Calculator", "ROI Enhancement Analysis"],
+              "insight_source": ["SIG072"]
+            }
+          ]
+        },
+        {
+          "id": "OPP071",
+          "name": "Predictive Maintenance Solution",
+          "stage": 3,
+          "amount": 420000,
+          "created_date": "2025-01-15",
+          "close_date": "2025-06-15",
+          "probability": 55,
+          "product": "Asset Performance Management Platform",
+          "primary_contact": "CON071",
+          "signals": [
+            {
+              "id": "SIG073",
+              "type": "operational_event",
+              "source": "Industry News",
+              "date": "2025-01-30",
+              "title": "Equipment Failure at Colorado Facility",
+              "description": "Company experienced unplanned downtime due to critical equipment failure at main facility.",
+              "relevance_score": 85,
+              "url": "https://energynews.com/nexgen-equipment-failure"
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC009",
+      "name": "GlobalFinance Corp",
+      "industry": "Banking",
+      "size": "10000+ employees",
+      "revenue": "$5.2B",
+      "founded": 1995,
+      "headquarters": "London, UK",
+      "website": "globalfinancecorp.com",
+      "description": "International financial services corporation offering banking, investment, and wealth management services",
+      "technologies": ["Oracle Financials", "IBM Cloud", "Salesforce", "Tableau"],
+      "key_people": [
+        {
+          "id": "CON080",
+          "name": "Jonathan Williams",
+          "title": "Chief Technology Officer",
+          "email": "j.williams@globalfinancecorp.com",
+          "phone": "+44 20 7946 0123",
+          "linkedin": "linkedin.com/in/jonathanwilliams",
+          "influence_level": "Decision Maker",
+          "tags": ["Technology Strategy", "Financial Innovation"]
+        },
+        {
+          "id": "CON081",
+          "name": "Emily Zhang",
+          "title": "Head of Digital Transformation",
+          "email": "e.zhang@globalfinancecorp.com",
+          "phone": "+44 20 7946 0124",
+          "linkedin": "linkedin.com/in/emilyzhang",
+          "influence_level": "Champion",
+          "tags": ["Digital Strategy", "Change Management"]
+        },
+        {
+          "id": "CON082",
+          "name": "Michael Thompson",
+          "title": "Data Science Director",
+          "email": "m.thompson@globalfinancecorp.com",
+          "phone": "+44 20 7946 0125",
+          "linkedin": "linkedin.com/in/michaelthompson",
+          "influence_level": "Technical Evaluator",
+          "tags": ["AI/ML Specialist", "Analytics Expert"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP080",
+          "name": "Fraud Detection AI Platform",
+          "stage": 5,
+          "amount": 1850000,
+          "created_date": "2024-11-10",
+          "close_date": "2025-03-31",
+          "probability": 90,
+          "product": "Financial Intelligence Suite",
+          "primary_contact": "CON080",
+          "signals": [
+            {
+              "id": "SIG080",
+              "type": "security_incident",
+              "source": "Financial Times",
+              "date": "2025-01-05",
+              "title": "Banking Sector Hit by Sophisticated Fraud Scheme",
+              "description": "Several major banks targeted by coordinated fraud attack, with significant financial impact.",
+              "relevance_score": 95,
+              "url": "https://ft.com/content/banking-fraud-scheme"
+            },
+            {
+              "id": "SIG081",
+              "type": "executive_statement",
+              "source": "Earnings Call",
+              "date": "2025-01-20",
+              "title": "CEO Highlights Fraud Prevention as Top Priority",
+              "description": "During quarterly earnings call, CEO mentioned investing significantly in advanced fraud detection.",
+              "relevance_score": 100,
+              "url": "https://globalfinancecorp.com/investors/q4-earnings-call"
+            },
+            {
+              "id": "SIG082",
+              "type": "procurement_activity",
+              "source": "Salesforce",
+              "date": "2025-02-10",
+              "title": "Final Vendor Selection Meeting",
+              "description": "Procurement team scheduled final vendor selection meeting for next week.",
+              "relevance_score": 90
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT080",
+              "type": "executive_briefing",
+              "priority": "critical",
+              "title": "CEO Security Briefing",
+              "description": "Prepare executive-level security briefing highlighting how our solution addresses the recent fraud threats.",
+              "due_date": "2025-02-15",
+              "suggested_participants": ["Executive Sponsor", "Security Specialist", "Account Executive"],
+              "talking_points": [
+                "Specific capabilities to address the recent fraud scheme",
+                "Detection rate improvements over existing systems",
+                "Implementation timeline and security assurances",
+                "Industry benchmarking and success metrics"
+              ],
+              "supporting_materials": ["Financial Fraud Protection Overview", "Banking Industry Security Report"],
+              "insight_source": ["SIG080", "SIG081"]
+            },
+            {
+              "id": "ACT081",
+              "type": "procurement_support",
+              "priority": "critical",
+              "title": "Final Proposal Review and Preparation",
+              "description": "Review and finalize all procurement documentation ahead of vendor selection meeting.",
+              "due_date": "2025-02-12",
+              "suggested_participants": ["Account Executive", "Solution Consultant", "Commercial Team"],
+              "talking_points": [
+                "Commercial terms and pricing structure",
+                "Implementation timeline and resource requirements",
+                "Security certifications and compliance documentation",
+                "Service level agreements and support model"
+              ],
+              "supporting_materials": ["Final Proposal Package", "Implementation Plan", "Security Certification Documentation"],
+              "insight_source": ["SIG082"]
+            }
+          ]
+        },
+        {
+          "id": "OPP081",
+          "name": "Wealth Management Analytics",
+          "stage": 2,
+          "amount": 680000,
+          "created_date": "2025-01-25",
+          "close_date": "2025-07-15",
+          "probability": 30,
+          "product": "Investment Analytics Platform",
+          "primary_contact": "CON082",
+          "signals": [
+            {
+              "id": "SIG083",
+              "type": "web_session",
+              "source": "Website Analytics",
+              "date": "2025-02-01",
+              "title": "Investment Analytics Content Engagement",
+              "description": "Key stakeholders spent significant time reviewing investment analytics case studies.",
+              "relevance_score": 70
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC010",
+      "name": "PharmaGen Therapeutics",
+      "industry": "Pharmaceuticals",
+      "size": "5000-10000 employees",
+      "revenue": "$1.8B",
+      "founded": 1998,
+      "headquarters": "Cambridge, MA",
+      "website": "pharmagen.com",
+      "description": "Biopharmaceutical company specializing in gene therapy and personalized medicine",
+      "technologies": ["Veeva Systems", "AWS", "Databricks", "Informatica"],
+      "key_people": [
+        {
+          "id": "CON090",
+          "name": "Dr. Sarah Johnson",
+          "title": "Chief Digital Officer",
+          "email": "s.johnson@pharmagen.com",
+          "phone": "(617) 555-8901",
+          "linkedin": "linkedin.com/in/drsarahjohnson",
+          "influence_level": "Decision Maker",
+          "tags": ["Digital Health", "Innovation Leader"]
+        },
+        {
+          "id": "CON091",
+          "name": "Dr. Robert Lee",
+          "title": "VP of Clinical Informatics",
+          "email": "r.lee@pharmagen.com",
+          "phone": "(617) 555-8902",
+          "linkedin": "linkedin.com/in/drrobertlee",
+          "influence_level": "Champion",
+          "tags": ["Clinical Data Expert", "Research Focus"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP090",
+          "name": "Clinical Trial Analytics Platform",
+          "stage": 4,
+          "amount": 1250000,
+          "created_date": "2024-12-15",
+          "close_date": "2025-05-15",
+          "probability": 75,
+          "product": "Pharmaceutical Research Intelligence Suite",
+          "primary_contact": "CON091",
+          "signals": [
+            {
+              "id": "SIG090",
+              "type": "research_announcement",
+              "source": "BioPharmaceutical Journal",
+              "date": "2025-01-10",
+              "title": "PharmaGen Launches Phase 3 Trial for Gene Therapy",
+              "description": "Company initiating large-scale Phase 3 trial for breakthrough gene therapy treatment.",
+              "relevance_score": 90,
+              "url": "https://biopharmjournal.com/pharmagen-phase3-trial"
+            },
+            {
+              "id": "SIG091",
+              "type": "hiring_pattern",
+              "source": "LinkedIn",
+              "date": "2025-01-25",
+              "title": "Data Science Team Expansion",
+              "description": "Company posted multiple job openings for clinical data scientists and bioinformatics specialists.",
+              "relevance_score": 85,
+              "url": "https://linkedin.com/company/pharmagen/jobs"
+            },
+            {
+              "id": "SIG092",
+              "type": "competitor_displacement",
+              "source": "CRM Notes",
+              "date": "2025-02-05",
+              "title": "Dissatisfaction with Current Provider",
+              "description": "Customer expressed frustration with current analytics provider's performance and scalability.",
+              "relevance_score": 95
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT090",
+              "type": "technical_proof",
+              "priority": "high",
+              "title": "Clinical Data Processing Benchmark",
+              "description": "Conduct benchmark test using sample clinical data to demonstrate performance advantages.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Solution Architect", "Data Scientist", "Performance Engineer"],
+              "talking_points": [
+                "Performance comparison with current solution",
+                "Scalability for Phase 3 trial data volumes",
+                "Advanced analytics capabilities for genomic data",
+                "Compliance with pharmaceutical data regulations"
+              ],
+              "supporting_materials": ["Benchmark Methodology", "Performance Comparison Report"],
+              "insight_source": ["SIG090", "SIG092"]
+            },
+            {
+              "id": "ACT091",
+              "type": "transition_planning",
+              "priority": "medium",
+              "title": "Migration Strategy from Current Provider",
+              "description": "Develop detailed migration plan to minimize disruption during transition.",
+              "due_date": "2025-02-25",
+              "suggested_participants": ["Implementation Lead", "Account Executive", "Customer Success Manager"],
+              "talking_points": [
+                "Data migration approach and timeline",
+                "User training and transition support",
+                "Parallel running period strategy",
+                "Risk mitigation and contingency planning"
+              ],
+              "supporting_materials": ["Migration Methodology", "Transition Timeline", "Risk Management Plan"],
+              "insight_source": ["SIG092"]
+            }
+          ]
+        },
+        {
+          "id": "OPP091",
+          "name": "Patient Outcome Prediction Platform",
+          "stage": 2,
+          "amount": 850000,
+          "created_date": "2025-01-20",
+          "close_date": "2025-07-30",
+          "probability": 40,
+          "product": "Healthcare Outcomes Intelligence Suite",
+          "primary_contact": "CON090",
+          "signals": [
+            {
+              "id": "SIG093",
+              "type": "conference_presentation",
+              "source": "BioTech Conference",
+              "date": "2025-02-01",
+              "title": "Personalized Medicine Initiative",
+              "description": "Dr. Johnson presented on PharmaGen's personalized medicine strategy at industry conference.",
+              "relevance_score": 80,
+              "url": "https://biotechconference.com/2025/sessions/personalized-medicine"
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC011",
+      "name": "Precision Manufacturing Inc.",
+      "industry": "Manufacturing",
+      "size": "1000-5000 employees",
+      "revenue": "$380M",
+      "founded": 1992,
+      "headquarters": "Detroit, MI",
+      "website": "precisionmfg.com",
+      "description": "Advanced manufacturing company specializing in precision components for automotive and aerospace industries",
+      "technologies": ["SAP", "Siemens PLM", "Microsoft Azure", "PowerBI"],
+      "key_people": [
+        {
+          "id": "CON100",
+          "name": "Thomas Anderson",
+          "title": "VP of Operations",
+          "email": "t.anderson@precisionmfg.com",
+          "phone": "(313) 555-4567",
+          "linkedin": "linkedin.com/in/thomasanderson",
+          "influence_level": "Decision Maker",
+          "tags": ["Operational Excellence", "Manufacturing Expert"]
+        },
+        {
+          "id": "CON101",
+          "name": "Jennifer Kim",
+          "title": "Director of Digital Manufacturing",
+          "email": "j.kim@precisionmfg.com",
+          "phone": "(313) 555-4568",
+          "linkedin": "linkedin.com/in/jenniferkim",
+          "influence_level": "Champion",
+          "tags": ["Industry 4.0", "Digital Transformation"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP100",
+          "name": "Factory Intelligence Platform",
+          "stage": 3,
+          "amount": 780000,
+          "created_date": "2025-01-10",
+          "close_date": "2025-05-31",
+          "probability": 60,
+          "product": "Manufacturing Intelligence Suite",
+          "primary_contact": "CON101",
+          "signals": [
+            {
+              "id": "SIG100",
+              "type": "contract_news",
+              "source": "Manufacturing Monthly",
+              "date": "2025-01-15",
+              "title": "Precision Manufacturing Wins Major Aerospace Contract",
+              "description": "Company secured $50M contract to supply precision components for next-generation aircraft.",
+              "relevance_score": 85,
+              "url": "https://manufacturingmonthly.com/precision-aerospace-contract"
+            },
+            {
+              "id": "SIG101",
+              "type": "intent_data",
+              "source": "Bombora",
+              "date": "2025-01-28",
+              "title": "Research on Manufacturing Analytics",
+              "description": "Multiple stakeholders researching manufacturing intelligence platforms and predictive maintenance.",
+              "relevance_score": 80,
+              "topics": ["manufacturing analytics", "predictive maintenance", "quality control"]
+            }
+          ],
+          "next_actions": []
+        },
+        {
+          "id": "OPP101",
+          "name": "Quality Prediction System",
+          "stage": 4,
+          "amount": 420000,
+          "created_date": "2024-12-10",
+          "close_date": "2025-04-15",
+          "probability": 70,
+          "product": "Quality Intelligence Platform",
+          "primary_contact": "CON100",
+          "signals": [
+            {
+              "id": "SIG102",
+              "type": "quality_issue",
+              "source": "Industry News",
+              "date": "2025-01-10",
+              "title": "Component Recall from Major Customer",
+              "description": "One of Precision's customers issued limited recall affecting components from multiple suppliers.",
+              "relevance_score": 90,
+              "url": "https://industrynews.com/automotive-component-recall"
+            },
+            {
+              "id": "SIG103",
+              "type": "executive_presentation",
+              "source": "CRM Notes",
+              "date": "2025-01-25",
+              "title": "Quality Initiative Presentation",
+              "description": "Executive team presented quality improvement initiative to board of directors.",
+              "relevance_score": 85
+            },
+            {
+              "id": "SIG104",
+              "type": "pilot_success",
+              "source": "Salesforce",
+              "date": "2025-02-10",
+              "title": "POC Results Meeting",
+              "description": "Successful proof of concept demonstrated 15% improvement in defect prediction accuracy.",
+              "relevance_score": 95
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT100",
+              "type": "pilot_expansion",
+              "priority": "high",
+              "title": "Production Implementation Planning",
+              "description": "Develop plan to expand from successful POC to full production implementation.",
+              "due_date": "2025-02-25",
+              "suggested_participants": ["Implementation Manager", "Solution Architect", "Account Executive"],
+              "talking_points": [
+                "Scaling from pilot to production environment",
+                "Implementation phasing by production line",
+                "Integration with existing quality systems",
+                "User training and change management approach"
+              ],
+              "supporting_materials": ["Implementation Roadmap", "Scaling Methodology", "Training Plan"],
+              "insight_source": ["SIG104"]
+            },
+            {
+              "id": "ACT101",
+              "type": "value_quantification",
+              "priority": "medium",
+              "title": "ROI Analysis for Board Presentation",
+              "description": "Create detailed ROI analysis for customer's upcoming board presentation.",
+              "due_date": "2025-03-05",
+              "suggested_participants": ["Value Engineer", "Account Executive"],
+              "talking_points": [
+                "Defect reduction financial impact",
+                "Recall risk mitigation value",
+                "Quality improvement metrics and benchmarks",
+                "Competitive advantage creation"
+              ],
+              "supporting_materials": ["ROI Calculator", "Quality Impact Analysis", "Customer Case Studies"],
+              "insight_source": ["SIG102", "SIG103"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ACC012",
+      "name": "InsureTech Dynamics",
+      "industry": "Insurance",
+      "size": "500-1000 employees",
+      "revenue": "$120M",
+      "founded": 2010,
+      "headquarters": "Chicago, IL",
+      "website": "insuretech.com",
+      "description": "Innovative insurance technology company offering digital insurance solutions and analytics platforms",
+      "technologies": ["AWS", "Salesforce", "Tableau", "MongoDB"],
+      "key_people": [
+        {
+          "id": "CON110",
+          "name": "Michelle Rodriguez",
+          "title": "Chief Digital Officer",
+          "email": "m.rodriguez@insuretech.com",
+          "phone": "(312) 555-7890",
+          "linkedin": "linkedin.com/in/michellerodriguez",
+          "influence_level": "Decision Maker",
+          "tags": ["Digital Transformation", "InsurTech Leader"]
+        },
+        {
+          "id": "CON111",
+          "name": "David Chen",
+          "title": "VP of Data Science",
+          "email": "d.chen@insuretech.com",
+          "phone": "(312) 555-7891",
+          "linkedin": "linkedin.com/in/davidchen",
+          "influence_level": "Champion",
+          "tags": ["Analytics Expert", "AI Advocate"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP110",
+          "name": "Claims Analytics Platform",
+          "stage": 5,
+          "amount": 550000,
+          "created_date": "2024-11-15",
+          "close_date": "2025-03-15",
+          "probability": 85,
+          "product": "Insurance Intelligence Suite",
+          "primary_contact": "CON110",
+          "signals": [
+            {
+              "id": "SIG110",
+              "type": "partnership_announcement",
+              "source": "Insurance Business Review",
+              "date": "2025-01-05",
+              "title": "InsureTech Partners with Major Carrier",
+              "description": "Company announced strategic partnership with Fortune 100 insurance carrier for claims digitization.",
+              "relevance_score": 90,
+              "url": "https://insurancebusinessreview.com/insuretech-partnership"
+            },
+            {
+              "id": "SIG111",
+              "type": "contract_activity",
+              "source": "Salesforce",
+              "date": "2025-01-20",
+              "title": "Contract Review Completed",
+              "description": "Legal teams have completed contract review with only minor revisions needed.",
+              "relevance_score": 95
+            },
+            {
+              "id": "SIG112",
+              "type": "implementation_planning",
+              "source": "CRM Notes",
+              "date": "2025-02-05",
+              "title": "Implementation Team Assembled",
+              "description": "Customer has assigned internal implementation team and requested kickoff planning.",
+              "relevance_score": 100
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT110",
+              "type": "contract_finalization",
+              "priority": "critical",
+              "title": "Final Contract Amendments",
+              "description": "Address final contract revisions and prepare for signature.",
+              "due_date": "2025-02-15",
+              "suggested_participants": ["Account Executive", "Legal Counsel"],
+              "talking_points": [
+                "Remaining contract adjustments",
+                "Implementation timeline commitments",
+                "Performance guarantee terms",
+                "Approval process and signing authority"
+              ],
+              "supporting_materials": ["Revised Contract", "Approval Workflow"],
+              "insight_source": ["SIG111"]
+            },
+            {
+              "id": "ACT111",
+              "type": "kickoff_planning",
+              "priority": "high",
+              "title": "Implementation Kickoff Preparation",
+              "description": "Prepare for implementation kickoff meeting with customer team.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Implementation Manager", "Solution Architect", "Customer Success Manager"],
+              "talking_points": [
+                "Project governance and communication plan",
+                "Implementation phases and milestones",
+                "Team roles and responsibilities",
+                "Success criteria and measurement approach"
+              ],
+              "supporting_materials": ["Implementation Methodology", "Project Plan Template", "RACI Matrix"],
+              "insight_source": ["SIG112"]
+            }
+          ]
+        },
+        {
+          "id": "OPP111",
+          "name": "Underwriting Automation Platform",
+          "stage": 2,
+          "amount": 380000,
+          "created_date": "2025-01-25",
+          "close_date": "2025-06-30",
+          "probability": 35,
+          "product": "Risk Intelligence Platform",
+          "primary_contact": "CON111",
+          "signals": [
+            {
+              "id": "SIG113",
+              "type": "product_research",
+              "source": "Website Analytics",
+              "date": "2025-02-01",
+              "title": "Underwriting Automation Content Engagement",
+              "description": "Multiple stakeholders downloaded underwriting automation whitepaper and viewed related content.",
+              "relevance_score": 75
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC013",
+      "name": "CloudNative Systems",
+      "industry": "Information Technology",
+      "size": "100-500 employees",
+      "revenue": "$65M",
+      "founded": 2016,
+      "headquarters": "Seattle, WA",
+      "website": "cloudnative.io",
+      "description": "Cloud infrastructure and DevOps platform provider helping companies accelerate cloud-native development",
+      "technologies": ["Kubernetes", "AWS", "Terraform", "Prometheus"],
+      "key_people": [
+        {
+          "id": "CON120",
+          "name": "Andrew Miller",
+          "title": "Chief Technology Officer",
+          "email": "a.miller@cloudnative.io",
+          "phone": "(206) 555-2345",
+          "linkedin": "linkedin.com/in/andrewmiller",
+          "influence_level": "Decision Maker",
+          "tags": ["Cloud Architecture", "Engineering Leader"]
+        },
+        {
+          "id": "CON121",
+          "name": "Sophia Davis",
+          "title": "VP of Product",
+          "email": "s.davis@cloudnative.io",
+          "phone": "(206) 555-2346",
+          "linkedin": "linkedin.com/in/sophiadavis",
+          "influence_level": "Champion",
+          "tags": ["Product Strategy", "Customer Advocate"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP120",
+          "name": "DevOps Analytics Platform",
+          "stage": 4,
+          "amount": 380000,
+          "created_date": "2024-12-20",
+          "close_date": "2025-04-15",
+          "probability": 75,
+          "product": "Development Intelligence Suite",
+          "primary_contact": "CON120",
+          "signals": [
+            {
+              "id": "SIG120",
+              "type": "funding_news",
+              "source": "TechCrunch",
+              "date": "2025-01-10",
+              "title": "CloudNative Raises $30M Series B",
+              "description": "Company secured $30M in Series B funding to accelerate product development and market expansion.",
+              "relevance_score": 85,
+              "url": "https://techcrunch.com/cloudnative-funding-round"
+            },
+            {
+              "id": "SIG121",
+              "type": "growth_challenge",
+              "source": "Industry Analysis",
+              "date": "2025-01-25",
+              "title": "Scaling Challenges for Fast-Growing DevOps Companies",
+              "description": "Industry report highlights operational challenges for rapidly scaling DevOps platform companies.",
+              "relevance_score": 80,
+              "url": "https://devopsreport.com/scaling-challenges-2025"
+            },
+            {
+              "id": "SIG122",
+              "type": "customer_testimony",
+              "source": "CRM Notes",
+              "date": "2025-02-10",
+              "title": "Positive Feedback on Initial Demo",
+              "description": "CTO provided enthusiastic feedback on initial platform demonstration and requested technical deep dive.",
+              "relevance_score": 90
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT120",
+              "type": "technical_deep_dive",
+              "priority": "high",
+              "title": "Engineering Team Technical Deep Dive",
+              "description": "Schedule comprehensive technical session with their engineering leadership team.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Solution Architect", "Product Manager", "Technical Account Manager"],
+              "talking_points": [
+                "Technical architecture and integration approach",
+                "Security model and compliance frameworks",
+                "Scalability testing and performance benchmarks",
+                "API capabilities and extensibility options"
+              ],
+              "supporting_materials": ["Technical Architecture Overview", "API Documentation", "Security Whitepaper"],
+              "insight_source": ["SIG122"]
+            },
+            {
+              "id": "ACT121",
+              "type": "growth_alignment",
+              "priority": "medium",
+              "title": "Scaling Support Strategy",
+              "description": "Develop proposal showing how our platform addresses their growth-related operational challenges.",
+              "due_date": "2025-02-25",
+              "suggested_participants": ["Account Executive", "Customer Success Manager"],
+              "talking_points": [
+                "Automation to support scale without proportional headcount",
+                "Visibility across rapidly growing development teams",
+                "Governance and standardization capabilities",
+                "Onboarding efficiency for new development teams"
+              ],
+              "supporting_materials": ["Scaling Strategy Guide", "DevOps Growth Case Study"],
+              "insight_source": ["SIG120", "SIG121"]
+            }
+          ]
+        },
+        {
+          "id": "OPP121",
+          "name": "Cloud Cost Optimization Platform",
+          "stage": 2,
+          "amount": 210000,
+          "created_date": "2025-01-15",
+          "close_date": "2025-06-30",
+          "probability": 40,
+          "product": "Cloud Economics Suite",
+          "primary_contact": "CON121",
+          "signals": [
+            {
+              "id": "SIG123",
+              "type": "blog_post",
+              "source": "Company Blog",
+              "date": "2025-01-30",
+              "title": "Controlling Cloud Costs at Scale",
+              "description": "VP of Product published blog post about challenges of managing cloud costs in high-growth environments.",
+              "relevance_score": 75,
+              "url": "https://cloudnative.io/blog/cloud-cost-management"
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    },
+    {
+      "id": "ACC014",
+      "name": "SmartCity Solutions",
+      "industry": "Government & Public Sector",
+      "size": "500-1000 employees",
+      "revenue": "$150M",
+      "founded": 2012,
+      "headquarters": "Toronto, Canada",
+      "website": "smartcitysol.com",
+      "description": "Urban technology company providing smart city solutions for municipalities and government agencies",
+      "technologies": ["Microsoft Azure", "IoT Hub", "PowerBI", "ArcGIS"],
+      "key_people": [
+        {
+          "id": "CON130",
+          "name": "Robert Wilson",
+          "title": "Chief Information Officer",
+          "email": "r.wilson@smartcitysol.com",
+          "phone": "(416) 555-7890",
+          "linkedin": "linkedin.com/in/robertwilson",
+          "influence_level": "Decision Maker",
+          "tags": ["Urban Technology", "Digital Government"]
+        },
+        {
+          "id": "CON131",
+          "name": "Maria Garcia",
+          "title": "Director of Analytics",
+          "email": "m.garcia@smartcitysol.com",
+          "phone": "(416) 555-7891",
+          "linkedin": "linkedin.com/in/mariagarcia",
+          "influence_level": "Champion",
+          "tags": ["Data Science", "Analytics Leader"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP130",
+          "name": "Urban Data Platform",
+          "stage": 3,
+          "amount": 620000,
+          "created_date": "2025-01-10",
+          "close_date": "2025-05-31",
+          "probability": 60,
+          "product": "Urban Intelligence Platform",
+          "primary_contact": "CON130",
+          "signals": [
+            {
+              "id": "SIG130",
+              "type": "contract_win",
+              "source": "Government Technology News",
+              "date": "2025-01-15",
+              "title": "SmartCity Wins Major Municipal Contract",
+              "description": "Company secured $40M contract to implement smart city solutions for major Canadian municipality.",
+              "relevance_score": 85,
+              "url": "https://govtechnews.com/smartcity-municipal-contract"
+            },
+            {
+              "id": "SIG131",
+              "type": "intent_data",
+              "source": "Bombora",
+              "date": "2025-01-28",
+              "title": "Research on Urban Analytics Platforms",
+              "description": "Multiple stakeholders researching urban data platforms and analytics solutions.",
+              "relevance_score": 80,
+              "topics": ["urban analytics", "smart city data", "municipal dashboards"]
+            }
+          ],
+          "next_actions": []
+        },
+        {
+          "id": "OPP131",
+          "name": "Transportation Analytics System",
+          "stage": 4,
+          "amount": 450000,
+          "created_date": "2024-12-05",
+          "close_date": "2025-04-15",
+          "probability": 70,
+          "product": "Transportation Intelligence Suite",
+          "primary_contact": "CON131",
+          "signals": [
+            {
+              "id": "SIG132",
+              "type": "public_announcement",
+              "source": "Press Release",
+              "date": "2025-01-10",
+              "title": "Smart Transit Initiative Announcement",
+              "description": "Company announced new smart transit initiative focused on optimizing urban transportation networks.",
+              "relevance_score": 90,
+              "url": "https://smartcitysol.com/press/smart-transit-initiative"
+            },
+            {
+              "id": "SIG133",
+              "type": "event_participation",
+              "source": "Event Registration",
+              "date": "2025-01-25",
+              "title": "Transportation Analytics Webinar Attendance",
+              "description": "Key stakeholders attended specialized webinar on transportation analytics solutions.",
+              "relevance_score": 85
+            },
+            {
+              "id": "SIG134",
+              "type": "pilot_results",
+              "source": "CRM Notes",
+              "date": "2025-02-05",
+              "title": "Successful Pilot Program Results",
+              "description": "Initial pilot demonstrated 18% improvement in transit route optimization.",
+              "relevance_score": 95
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT130",
+              "type": "pilot_expansion",
+              "priority": "high",
+              "title": "Transit Pilot Expansion Plan",
+              "description": "Develop comprehensive plan to expand successful pilot to full transit network.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Solution Architect", "Implementation Manager", "Account Executive"],
+              "talking_points": [
+                "Scaling from pilot routes to full network",
+                "Performance optimization at scale",
+                "Integration with existing transit systems",
+                "Implementation phasing and timeline"
+              ],
+              "supporting_materials": ["Expansion Methodology", "Implementation Roadmap", "Scaling Case Study"],
+              "insight_source": ["SIG134"]
+            },
+            {
+              "id": "ACT131",
+              "type": "initiative_alignment",
+              "priority": "medium",
+              "title": "Smart Transit Initiative Alignment",
+              "description": "Create strategic presentation showing how our solution supports their smart transit initiative goals.",
+              "due_date": "2025-02-25",
+              "suggested_participants": ["Account Executive", "Value Engineer"],
+              "talking_points": [
+                "Alignment with initiative objectives and KPIs",
+                "Integration with other smart city components",
+                "Citizen experience improvements",
+                "Operational efficiency gains"
+              ],
+              "supporting_materials": ["Smart Transit Strategy Guide", "Urban Mobility Case Study"],
+              "insight_source": ["SIG132"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ACC015",
+      "name": "AgroData Innovations",
+      "industry": "Agriculture",
+      "size": "100-500 employees",
+      "revenue": "$40M",
+      "founded": 2014,
+      "headquarters": "Des Moines, IA",
+      "website": "agrodatainnovations.com",
+      "description": "Agricultural technology company providing data-driven solutions for modern farming and agribusiness",
+      "technologies": ["AWS", "Python", "TensorFlow", "Tableau"],
+      "key_people": [
+        {
+          "id": "CON140",
+          "name": "James Peterson",
+          "title": "Chief Technology Officer",
+          "email": "j.peterson@agrodatainnovations.com",
+          "phone": "(515) 555-4321",
+          "linkedin": "linkedin.com/in/jamespeterson",
+          "influence_level": "Decision Maker",
+          "tags": ["AgTech Leader", "Data Science"]
+        },
+        {
+          "id": "CON141",
+          "name": "Laura Martinez",
+          "title": "VP of Product Management",
+          "email": "l.martinez@agrodatainnovations.com",
+          "phone": "(515) 555-4322",
+          "linkedin": "linkedin.com/in/lauramartinez",
+          "influence_level": "Champion",
+          "tags": ["Product Strategy", "Customer Advocate"]
+        }
+      ],
+      "opportunities": [
+        {
+          "id": "OPP140",
+          "name": "Agricultural Intelligence Platform",
+          "stage": 4,
+          "amount": 320000,
+          "created_date": "2024-12-15",
+          "close_date": "2025-04-30",
+          "probability": 75,
+          "product": "Farm Intelligence Suite",
+          "primary_contact": "CON141",
+          "signals": [
+            {
+              "id": "SIG140",
+              "type": "partnership_announcement",
+              "source": "AgTech Today",
+              "date": "2025-01-10",
+              "title": "AgroData Partners with Major Equipment Manufacturer",
+              "description": "Company announced strategic partnership with leading agricultural equipment manufacturer for data integration.",
+              "relevance_score": 85,
+              "url": "https://agtechtoday.com/agrodata-partnership"
+            },
+            {
+              "id": "SIG141",
+              "type": "intent_data",
+              "source": "Bombora",
+              "date": "2025-01-25",
+              "title": "Research on Agricultural Analytics",
+              "description": "Multiple stakeholders researching advanced analytics solutions for agriculture.",
+              "relevance_score": 80,
+              "topics": ["agricultural analytics", "farm data", "crop yield prediction"]
+            },
+            {
+              "id": "SIG142",
+              "type": "product_roadmap",
+              "source": "CRM Notes",
+              "date": "2025-02-05",
+              "title": "Updated Product Roadmap",
+              "description": "Customer shared updated product roadmap highlighting analytics as key capability gap.",
+              "relevance_score": 90
+            }
+          ],
+          "next_actions": [
+            {
+              "id": "ACT140",
+              "type": "integration_planning",
+              "priority": "high",
+              "title": "Equipment Integration Strategy",
+              "description": "Develop detailed plan for integrating with partner's agricultural equipment data streams.",
+              "due_date": "2025-02-20",
+              "suggested_participants": ["Solution Architect", "Integration Specialist", "Account Executive"],
+              "talking_points": [
+                "Data integration approach with equipment sensors",
+                "Real-time vs. batch processing considerations",
+                "Field-level data collection and aggregation",
+                "Edge computing capabilities and limitations"
+              ],
+              "supporting_materials": ["Integration Architecture", "IoT Data Flow Diagrams", "Equipment Integration Guide"],
+              "insight_source": ["SIG140"]
+            },
+            {
+              "id": "ACT141",
+              "type": "roadmap_alignment",
+              "priority": "medium",
+              "title": "Product Roadmap Alignment Session",
+              "description": "Schedule session to align our product roadmap with customer's updated priorities.",
+              "due_date": "2025-02-25",
+              "suggested_participants": ["Product Manager", "Account Executive"],
+              "talking_points": [
+                "Analytics capability gaps and solutions",
+                "Feature prioritization and timeline",
+                "Custom development considerations",
+                "Integration points with existing capabilities"
+              ],
+              "supporting_materials": ["Product Roadmap", "Feature Timeline", "Capability Matrix"],
+              "insight_source": ["SIG142"]
+            }
+          ]
+        },
+        {
+          "id": "OPP141",
+          "name": "Supply Chain Optimization Solution",
+          "stage": 2,
+          "amount": 180000,
+          "created_date": "2025-01-20",
+          "close_date": "2025-06-15",
+          "probability": 35,
+          "product": "Agricultural Supply Chain Platform",
+          "primary_contact": "CON140",
+          "signals": [
+            {
+              "id": "SIG143",
+              "type": "conference_participation",
+              "source": "Event Registration",
+              "date": "2025-02-01",
+              "title": "Agricultural Supply Chain Conference",
+              "description": "Key stakeholders registered for industry conference focused on agricultural supply chain innovations.",
+              "relevance_score": 70
+            }
+          ],
+          "next_actions": []
+        }
+      ]
+    }
+  ]
+}
